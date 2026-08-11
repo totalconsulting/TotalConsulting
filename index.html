@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Consulting — 不動産・IT・集客を総合サポート | 北九州市</title>
+    <meta name="description" content="Total Consultingは福岡県北九州市を拠点に、不動産、ITサポート、SNS集客コンサルを提供。業界経験15年の実績で、あなたのビジネスを全面サポートします。">
+    <meta name="google-site-verification" content="OI4FBE-jVzjeQRwm9t2gKHJsLFtaYcAxCzahaMJUenQ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+/* ─────────────────────────────
+   DESIGN TOKENS
+───────────────────────────── */
+:root {
+  --ink:    #0b1120;
+  --ink2:   #162035;
+  --ink3:   #1d2d48;
+  --steel:  #2a4270;
+  --sky:    #0ea5e9;
+  --sky2:   #38bdf8;
+  --glow:   rgba(14,165,233,.18);
+  --amber:  #f59e0b;
+  --amber2: #fbbf24;
+  --snow:   #ffffff;
+  --mist:   #f1f5f9;
+  --slate:  #64748b;
+  --line-green: #06c755;
+  --r: 14px;
+  --rl: 22px;
+}
+
+/* ─────────────────────────────
+   RESET
+───────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:var(--snow);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+section[id]{scroll-margin-top:76px}
+
+/* ─────────────────────────────
+   TYPOGRAPHY
+───────────────────────────── */
+.disp{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.04em;
+  line-height:1;
+}
+.jp{font-family:'Noto Sans JP',sans-serif}
+
+/* ─────────────────────────────
+   UTILITIES
+───────────────────────────── */
+.wrap{max-width:1240px;margin:0 auto;padding:0 5%}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sky);
+  padding:.3rem 1rem;
+  background:rgba(14,165,233,.1);
+  border:1px solid rgba(14,165,233,.25);
+  border-radius:50px;
+  margin-bottom:1.1rem;
+}
+
+.eyebrow::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--sky);animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.4;transform:scale(.6)}
+}
+
+.section-h{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  font-weight:900;
+  line-height:1.18;
+  color:var(--ink);
+}
+.section-h.light{color:var(--snow)}
+
+.section-lead{
+  font-size:1.05rem;
+  color:var(--slate);
+  max-width:540px;
+  margin:0 auto;
+}
+.section-lead.light{color:rgba(255,255,255,.7)}
+
+.sec-header{
+  text-align:center;
+  margin-bottom:4rem;
+}
+
+/* ─────────────────────────────
+   BUTTONS
+───────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.9rem 2.2rem;
+  border-radius:50px;
+  font-family:'DM Sans',sans-serif;
+  font-weight:700;font-size:.97rem;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:transform .28s cubic-bezier(.34,1.56,.64,1),
+             box-shadow .28s ease,
+             background .2s ease;
+  white-space:nowrap;
+}
+.btn:hover{transform:translateY(-3px)}
+
+.btn-amber{
+  background:linear-gradient(135deg,var(--amber),#d97706);
+  color:var(--snow);
+  box-shadow:0 8px 24px rgba(245,158,11,.35);
+}
+.btn-amber:hover{box-shadow:0 14px 36px rgba(245,158,11,.55)}
+
+.btn-ghost{
+  background:transparent;
+  color:var(--snow);
+  border-color:rgba(255,255,255,.5);
+}
+.btn-ghost:hover{background:var(--snow);color:var(--ink);border-color:var(--snow)}
+
+.btn-sky{
+  background:transparent;
+  color:var(--sky);
+  border-color:var(--sky);
+}
+.btn-sky:hover{background:var(--sky);color:var(--snow)}
+
+.btn-line{
+  background:var(--line-green);
+  color:var(--snow);
+  box-shadow:0 8px 24px rgba(6,199,85,.3);
+}
+.btn-line:hover{box-shadow:0 14px 36px rgba(6,199,85,.5)}
+
+.btn-sm{padding:.62rem 1.5rem;font-size:.88rem}
+.btn-full{width:100%}
+
+/* ─────────────────────────────
+   NAV
+───────────────────────────── */
+.header{
+  position:fixed;top:0;left:0;right:0;
+  z-index:1000;
+  transition:background .3s ease,box-shadow .3s ease;
+  background:rgba(11,17,32,.92);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.header.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.45)}
+
+.nav{
+  max-width:1240px;margin:0 auto;padding:0 5%;
+  height:76px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+
+.nav-logo{display:flex;align-items:center;gap:.8rem}
+.nav-logo img{width:44px;height:44px;object-fit:contain;border-radius:8px}
+.nav-logo-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.45rem;letter-spacing:.06em;
+  color:var(--snow);
+}
+.nav-logo-sub{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:.65rem;color:var(--sky);font-weight:500;
+  display:block;margin-top:.1rem;letter-spacing:.02em;
+}
+
+.nav-items{
+  display:flex;list-style:none;gap:.2rem;align-items:center;
+}
+.nav-items a{
+  color:rgba(255,255,255,.75);
+  font-size:.87rem;font-weight:500;
+  padding:.45rem .85rem;
+  border-radius:8px;
+  transition:all .2s ease;
+}
+.nav-items a:hover{color:var(--snow);background:rgba(255,255,255,.08)}
+
+.nav-cta{
+  background:linear-gradient(135deg,var(--amber),#d97706) !important;
+  color:var(--snow) !important;
+  padding:.5rem 1.3rem !important;
+  border-radius:50px !important;
+  font-weight:700 !important;
+  box-shadow:0 4px 16px rgba(245,158,11,.35);
+  transition:box-shadow .25s ease,transform .25s ease !important;
+}
+.nav-cta:hover{box-shadow:0 8px 28px rgba(245,158,11,.55);transform:translateY(-2px) !important}
+
+/* Hamburger */
+.ham{
+  display:none;
+  flex-direction:column;gap:5px;
+  cursor:pointer;padding:7px;border-radius:8px;
+  transition:background .2s;
+}
+.ham:hover{background:rgba(255,255,255,.07)}
+.ham span{
+  display:block;width:23px;height:2px;
+  background:var(--snow);border-radius:2px;
+  transition:all .3s ease;
+}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Mobile menu */
+.mob-nav{
+  display:none;
+  position:fixed;top:76px;left:0;right:0;
+  background:rgba(9,14,26,.97);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:1.5rem 5% 2rem;
+  z-index:999;
+  flex-direction:column;gap:.3rem;
+}
+.mob-nav.open{display:flex}
+.mob-nav a{
+  color:rgba(255,255,255,.8);
+  font-weight:500;font-size:1rem;
+  padding:.85rem 1rem;
+  border-radius:10px;
+  transition:all .2s ease;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.mob-nav a:hover{color:var(--snow);background:rgba(255,255,255,.06)}
+.mob-nav a:last-child{
+  margin-top:.8rem;
+  background:var(--line-green);
+  color:var(--snow) !important;
+  text-align:center;font-weight:700;
+  border-bottom:none;border-radius:50px;
+}
+
+/* ─────────────────────────────
+   HERO
+───────────────────────────── */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:9rem 5% 5rem;
+  background:var(--ink);
+  overflow:hidden;
+}
+
+/* Animated gradient mesh */
+.hero-mesh{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 70% at 15% 25%, rgba(14,100,200,.28) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 60% at 85% 75%, rgba(14,165,233,.18) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 50% 50%, rgba(245,158,11,.07) 0%, transparent 55%);
+  animation:meshDrift 12s ease-in-out infinite alternate;
+}
+@keyframes meshDrift{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(2%,1.5%) scale(1.02)}
+}
+
+/* Dot grid */
+.hero-dots{
+  position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+
+/* Diagonal accent line */
+.hero-line{
+  position:absolute;
+  top:0;right:0;
+  width:1px;height:100%;
+  background:linear-gradient(to bottom,transparent,rgba(14,165,233,.4),transparent);
+  transform:translateX(-30vw) rotate(12deg);
+  transform-origin:top;
+}
+
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1240px;margin:0 auto;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+}
+
+.hero-logo-wrap{
+  margin-bottom:3.5rem;
+  position:relative;
+}
+.hero-logo-wrap::after{
+  content:'';
+  position:absolute;
+  bottom:-30px;left:50%;
+  transform:translateX(-50%);
+  width:280px;height:40px;
+  background:radial-gradient(ellipse at center, rgba(14,165,233,.35) 0%, transparent 70%);
+  filter:blur(8px);
+  animation:glowPulse 3s ease-in-out infinite alternate;
+}
+@keyframes glowPulse{
+  from{opacity:.6;transform:translateX(-50%) scaleX(1)}
+  to{opacity:1;transform:translateX(-50%) scaleX(1.3)}
+}
+
+.hero-logo{
+  max-width:760px;width:100%;
+  filter:drop-shadow(0 0 50px rgba(14,165,233,.3));
+  animation:heroFloat 6s ease-in-out infinite;
+}
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-20px)}
+}
+
+.hero h1{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(2.2rem,6vw,4.2rem);
+  font-weight:900;
+  color:var(--snow);
+  line-height:1.2;
+  margin-bottom:1.3rem;
+  text-shadow:0 2px 40px rgba(0,0,0,.5);
+}
+
+.hero h1 .hl{
+  background:linear-gradient(120deg,var(--sky2) 0%,#bae6fd 40%,var(--amber2) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero-sub{
+  font-size:clamp(1rem,2.2vw,1.2rem);
+  color:rgba(255,255,255,.8);
+  max-width:600px;
+  margin:0 auto 2.8rem;
+  line-height:1.85;
+}
+
+.hero-pills{
+  display:flex;gap:.85rem;
+  justify-content:center;flex-wrap:wrap;
+  margin-bottom:3rem;
+}
+
+.pill{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.6rem 1.4rem;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:50px;
+  color:rgba(255,255,255,.9);
+  font-size:.92rem;font-weight:600;
+  font-family:'Noto Sans JP',sans-serif;
+  backdrop-filter:blur(4px);
+  transition:all .3s ease;
+}
+.pill:hover{
+  background:rgba(14,165,233,.18);
+  border-color:rgba(14,165,233,.4);
+  transform:translateY(-3px);
+}
+.pill .pi{font-size:1.05rem}
+
+.hero-cta{
+  display:flex;gap:1.1rem;
+  justify-content:center;flex-wrap:wrap;
+}
+
+/* ─────────────────────────────
+   STATS BAND
+───────────────────────────── */
+.stats-band{
+  background:linear-gradient(135deg,#112347 0%,#0d1b35 100%);
+  padding:4rem 5%;
+  position:relative;overflow:hidden;
+}
+.stats-band::before{
+  content:'';position:absolute;
+  right:-8%;top:-60%;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(14,165,233,.1),transparent 65%);
+  border-radius:50%;
+}
+
+.stats-row{
+  max-width:1040px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  position:relative;z-index:1;
+}
+
+.stat-box{
+  text-align:center;
+  padding:2.2rem 1rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r);
+  transition:all .3s ease;
+  position:relative;overflow:hidden;
+}
+.stat-box::before{
+  content:'';position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(14,165,233,.06),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.stat-box:hover{
+  border-color:rgba(14,165,233,.35);
+  transform:translateY(-6px);
+  box-shadow:0 16px 40px rgba(14,165,233,.12);
+}
+.stat-box:hover::before{opacity:1}
+
+.stat-n{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:3.2rem;letter-spacing:.04em;
+  color:var(--amber2);
+  display:block;line-height:1;
+  margin-bottom:.5rem;
+  text-shadow:0 0 30px rgba(245,158,11,.4);
+}
+.stat-l{
+  font-family:'Noto Sans JP',sans-serif;
+  color:rgba(255,255,255,.75);
+  font-size:.9rem;font-weight:500;
+}
+
+/* ─────────────────────────────
+   SERVICES
+───────────────────────────── */
+.services{
+  padding:8rem 5%;
+  background:var(--mist);
+  position:relative;
+}
+
+.svc-banner{
+  max-width:1240px;
+  margin:0 auto 5rem;
+  border-radius:var(--rl);
+  overflow:hidden;
+  box-shadow:0 24px 72px rgba(0,0,0,.16);
+}
+.svc-banner img{width:100%}
+
+.svc-cards{
+  max-width:1240px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+
+.svc-card{
+  background:var(--snow);
+  border-radius:var(--rl);
+  padding:2.4rem;
+  border:1px solid #e2e8f0;
+  box-shadow:0 2px 12px rgba(0,0,0,.05);
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.svc-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--sky),var(--amber));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s ease;
+}
+.svc-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 28px 72px rgba(0,0,0,.14);
+  border-color:rgba(14,165,233,.2);
+}
+.svc-card:hover::before{transform:scaleX(1)}
+
+.svc-ico{
+  width:60px;height:60px;
+  background:linear-gradient(135deg,rgba(14,165,233,.1),rgba(30,66,159,.07));
+  border-radius:16px;border:1px solid rgba(14,165,233,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.9rem;
+  margin-bottom:1.5rem;
+}
+
+.svc-card h3{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.2rem;font-weight:700;
+  color:var(--ink);
+  line-height:1.35;
+  margin-bottom:.75rem;
+}
+.svc-card>p{
+  color:var(--slate);font-size:.93rem;
+  margin-bottom:1.5rem;
+}
+
+.svc-ul{list-style:none;flex:1;margin-bottom:2rem}
+.svc-ul li{
+  display:flex;align-items:flex-start;gap:.55rem;
+  padding:.42rem 0;
+  color:var(--slate);font-size:.91rem;
+  border-bottom:1px solid #f1f5f9;
+}
+.svc-ul li:last-child{border:none}
+.svc-ul li::before{
+  content:'✓';color:var(--sky);font-weight:700;
+  flex-shrink:0;margin-top:1px;
+}
+
+.svc-btns{display:flex;flex-direction:column;gap:.6rem;margin-top:auto}
+
+/* ─────────────────────────────
+   PROVIDERS
+───────────────────────────── */
+.providers{
+  padding:5rem 5%;
+  background:var(--snow);
+  border-top:1px solid #e8edf4;
+  border-bottom:1px solid #e8edf4;
+}
+.providers-head{
+  text-align:center;
+  margin-bottom:2.5rem;
+}
+.providers-head h2{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.55rem;font-weight:900;
+  color:var(--ink);
+}
+.providers-head p{
+  color:var(--slate);
+  font-size:.93rem;margin-top:.4rem;
+}
+
+.providers-grid{
+  max-width:1240px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
+  gap:.9rem;
+}
+.p-chip{
+  background:var(--mist);
+  border:1px solid #dde3ec;
+  border-radius:12px;
+  padding:1rem .8rem;
+  text-align:center;
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:700;font-size:.88rem;
+  color:var(--ink2);
+  transition:all .25s ease;
+}
+.p-chip:hover{
+  background:#e0f2fe;
+  border-color:var(--sky);
+  color:var(--steel);
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px rgba(14,165,233,.12);
+}
+
+/* ─────────────────────────────
+   PORTFOLIO
+───────────────────────────── */
+.portfolio{
+  padding:8rem 5%;
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+
+/* Large decorative circle */
+.portfolio::before{
+  content:'';position:absolute;
+  right:-20%;top:50%;
+  width:800px;height:800px;
+  border-radius:50%;
+  border:1px solid rgba(14,165,233,.08);
+  transform:translateY(-50%);
+}
+.portfolio::after{
+  content:'';position:absolute;
+  right:-15%;top:50%;
+  width:560px;height:560px;
+  border-radius:50%;
+  border:1px solid rgba(14,165,233,.06);
+  transform:translateY(-50%);
+}
+
+.pf-grid{
+  max-width:1240px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1.8rem;
+  position:relative;z-index:1;
+}
+
+.pf-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--rl);
+  overflow:hidden;
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+}
+.pf-card:hover{
+  transform:translateY(-12px);
+  border-color:rgba(14,165,233,.4);
+  box-shadow:0 24px 72px rgba(14,165,233,.15);
+}
+
+.pf-img{
+  height:230px;
+  overflow:hidden;position:relative;
+}
+.pf-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+.pf-card:hover .pf-img img{transform:scale(1.07)}
+.pf-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 45%,rgba(10,16,28,.85) 100%);
+}
+/* 縦長のメニュー・リーフレットは全体を見せる */
+.pf-img.tall{
+  height:340px;
+  background:#0a1420;
+}
+.pf-img.tall img{object-fit:contain}
+.pf-img.tall::after{display:none}
+
+.pf-badge{
+  position:absolute;top:1rem;left:1rem;z-index:2;
+  background:var(--amber);
+  color:#000;
+  font-size:.72rem;font-weight:800;letter-spacing:.06em;
+  padding:.25rem .85rem;border-radius:50px;
+}
+
+.pf-body{padding:1.7rem}
+.pf-body h3{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.1rem;font-weight:700;
+  color:var(--snow);
+  margin-bottom:.5rem;
+}
+.pf-body p{
+  font-size:.88rem;
+  color:rgba(255,255,255,.58);
+  line-height:1.72;
+  margin-bottom:1.2rem;
+}
+.pf-skills{display:flex;flex-wrap:wrap;gap:.45rem}
+.pf-sk{
+  font-size:.74rem;font-weight:700;
+  color:var(--sky2);
+  background:rgba(14,165,233,.1);
+  border:1px solid rgba(14,165,233,.22);
+  padding:.2rem .75rem;border-radius:50px;
+}
+
+/* ─────────────────────────────
+   CASES
+───────────────────────────── */
+.cases{
+  padding:8rem 5%;
+  background:var(--mist);
+}
+
+.cases-grid{
+  max-width:1240px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.8rem;
+}
+
+.cs-card{
+  background:var(--snow);
+  border-radius:var(--rl);
+  overflow:hidden;
+  border:1px solid #e2e8f0;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+}
+.cs-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 60px rgba(0,0,0,.13);
+}
+
+.cs-thumb{
+  height:175px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:3.2rem;
+  position:relative;overflow:hidden;
+}
+.cs-thumb::before{
+  content:'';position:absolute;inset:0;
+  background:inherit;
+  opacity:.9;
+}
+.cs-thumb span{position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
+
+.cs-thumb.c1{background:linear-gradient(135deg,#1e3a8a,#2563eb)}
+.cs-thumb.c2{background:linear-gradient(135deg,#14532d,#16a34a)}
+.cs-thumb.c3{background:linear-gradient(135deg,#4a1d96,#7c3aed)}
+.cs-thumb.c4{background:linear-gradient(135deg,#78350f,#d97706)}
+.cs-thumb.c5{background:linear-gradient(135deg,#0c4a6e,#0ea5e9)}
+.cs-thumb.c6{background:linear-gradient(135deg,#881337,#e11d48)}
+
+.cs-body{padding:1.7rem}
+.cs-body h3{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.05rem;font-weight:700;
+  color:var(--ink);margin-bottom:.7rem;
+}
+.cs-body p{
+  font-size:.9rem;color:var(--slate);line-height:1.75;
+}
+.cs-result{
+  margin-top:1.1rem;padding-top:.9rem;
+  border-top:1px solid #f0f4f8;
+  font-size:.84rem;font-weight:700;
+  color:#92400e;
+}
+
+/* ─────────────────────────────
+   TESTIMONIALS
+───────────────────────────── */
+.testimonials{
+  padding:8rem 5%;
+  background:var(--snow);
+}
+
+.testi-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.8rem;
+}
+
+.tc{
+  background:var(--mist);
+  border-radius:var(--rl);
+  padding:2.2rem;
+  border:1px solid #e2e8f0;
+  position:relative;
+  transition:all .3s ease;
+}
+.tc:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 48px rgba(0,0,0,.1);
+  border-color:rgba(14,165,233,.25);
+}
+
+/* Large quote mark as visual element */
+.tc::before{
+  content:'\201C';
+  position:absolute;top:.6rem;right:1.4rem;
+  font-family:Georgia,serif;
+  font-size:5.5rem;line-height:1;
+  color:var(--sky);
+  opacity:.1;
+  pointer-events:none;
+}
+
+.tc-stars{
+  color:var(--amber);
+  font-size:1rem;letter-spacing:3px;
+  margin-bottom:.9rem;
+}
+.tc-text{
+  font-size:.93rem;color:#475569;
+  line-height:1.8;margin-bottom:1.5rem;
+}
+.tc-author{display:flex;align-items:center;gap:.8rem}
+.tc-av{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--sky),var(--steel));
+  display:flex;align-items:center;justify-content:center;
+  color:var(--snow);font-weight:700;font-size:1rem;
+  flex-shrink:0;
+}
+.tc-name{
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:700;font-size:.93rem;
+  color:var(--ink);
+}
+.tc-role{font-size:.8rem;color:var(--slate);margin-top:.1rem}
+
+/* ─────────────────────────────
+   ABOUT
+───────────────────────────── */
+.about{
+  padding:8rem 5%;
+  background:var(--mist);
+}
+.about-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+}
+
+.about-img-wrap{position:relative}
+.about-img{
+  width:100%;border-radius:var(--rl);
+  box-shadow:0 30px 80px rgba(0,0,0,.18);
+  position:relative;z-index:1;
+}
+
+/* Decorative border behind image */
+.about-img-wrap::before{
+  content:'';
+  position:absolute;
+  bottom:-16px;right:-16px;
+  width:100%;height:100%;
+  border:2px solid rgba(14,165,233,.3);
+  border-radius:var(--rl);
+  z-index:0;
+}
+
+.about-txt{display:flex;flex-direction:column;gap:1.5rem}
+.about-txt h2{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:900;color:var(--ink);
+  line-height:1.22;
+}
+
+.exp-pill{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:linear-gradient(135deg,var(--amber),#d97706);
+  color:var(--snow);
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:700;font-size:1.1rem;
+  padding:.75rem 2rem;border-radius:50px;
+  box-shadow:0 8px 24px rgba(245,158,11,.35);
+  width:fit-content;
+}
+
+.about-txt p{
+  color:var(--slate);font-size:1rem;line-height:1.9;
+}
+
+.feat-list{display:flex;flex-direction:column;gap:.8rem}
+.feat{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1rem 1.2rem;
+  background:var(--snow);
+  border-radius:12px;
+  border:1px solid #e2e8f0;
+  transition:all .25s ease;
+}
+.feat:hover{
+  border-color:rgba(14,165,233,.3);
+  transform:translateX(5px);
+  box-shadow:0 4px 16px rgba(14,165,233,.08);
+}
+.feat-ico{
+  width:38px;height:38px;
+  background:linear-gradient(135deg,rgba(14,165,233,.12),rgba(30,66,159,.07));
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;flex-shrink:0;
+}
+.feat-txt h4{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:.93rem;font-weight:700;color:var(--ink);
+  margin-bottom:.18rem;
+}
+.feat-txt p{font-size:.84rem;color:var(--slate);line-height:1.6;margin:0}
+
+/* ─────────────────────────────
+   CONTACT
+───────────────────────────── */
+.contact{
+  padding:8rem 5%;
+  background:linear-gradient(155deg,var(--ink2) 0%,var(--ink) 100%);
+  position:relative;overflow:hidden;
+}
+
+/* diagonal stripes decoration */
+.contact::before{
+  content:'';position:absolute;
+  top:0;left:-20%;right:-20%;bottom:0;
+  background:repeating-linear-gradient(
+    -55deg,
+    rgba(255,255,255,.012) 0px,
+    rgba(255,255,255,.012) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+}
+
+.contact-wrap{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;
+  position:relative;z-index:1;
+}
+
+/* Info side */
+.ci-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.4rem;font-weight:700;
+  color:var(--snow);
+  margin-bottom:1.8rem;
+}
+
+.ci{
+  display:flex;align-items:flex-start;gap:1.1rem;
+  padding:1.2rem 1.4rem;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  margin-bottom:1rem;
+  transition:all .25s ease;
+}
+.ci:hover{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(14,165,233,.3);
+  transform:translateX(4px);
+}
+.ci-icon{font-size:1.5rem;color:var(--sky);flex-shrink:0;margin-top:2px}
+.ci-lbl{
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sky2);
+  margin-bottom:.3rem;
+}
+.ci-val{
+  color:rgba(255,255,255,.88);font-size:.93rem;line-height:1.65;
+}
+.ci-val small{
+  display:block;font-size:.78rem;
+  color:rgba(255,255,255,.5);margin-top:.2rem;
+}
+
+.sns-row{display:flex;gap:.7rem;margin-top:1.4rem}
+.sns-ico{
+  width:46px;height:46px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.35rem;
+  transition:all .3s ease;
+  cursor:pointer;
+}
+.sns-ico:hover{
+  background:var(--sky);
+  border-color:var(--sky);
+  transform:translateY(-4px);
+}
+
+/* CTA box */
+.cta-box{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:var(--rl);
+  padding:2.6rem 2.2rem;
+}
+.cta-box h3{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.25rem;font-weight:700;
+  color:var(--snow);margin-bottom:.4rem;
+}
+.cta-box .sub{
+  font-size:.88rem;
+  color:rgba(255,255,255,.55);
+  margin-bottom:2rem;
+}
+
+.cta-list{display:flex;flex-direction:column;gap:.9rem}
+
+.cta-row{
+  display:flex;align-items:center;
+  justify-content:space-between;
+  padding:1.2rem 1.5rem;
+  border-radius:14px;
+  text-decoration:none;
+  transition:all .3s ease;
+  border:1.5px solid transparent;
+}
+.cta-row:hover{transform:translateY(-3px)}
+
+.cta-row .cr-left{display:flex;align-items:center;gap:1rem}
+.cta-row .cr-icon{font-size:1.7rem}
+.cta-row .cr-texts{}
+.cta-row .cr-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1rem;font-weight:700;
+  color:var(--snow);display:block;
+}
+.cta-row .cr-sub{
+  font-size:.75rem;
+  color:rgba(255,255,255,.5);
+  margin-top:.1rem;display:block;
+}
+.cta-arrow{font-size:1.1rem;color:rgba(255,255,255,.5);transition:transform .3s ease}
+.cta-row:hover .cta-arrow{transform:translateX(5px);color:var(--snow)}
+
+.cta-row.r-line{background:rgba(6,199,85,.15);border-color:rgba(6,199,85,.35)}
+.cta-row.r-line:hover{background:rgba(6,199,85,.25);border-color:var(--line-green);box-shadow:0 10px 32px rgba(6,199,85,.2)}
+
+.cta-row.r-house{background:rgba(14,165,233,.08);border-color:rgba(14,165,233,.2)}
+.cta-row.r-house:hover{background:rgba(14,165,233,.18);border-color:var(--sky);box-shadow:0 10px 32px rgba(14,165,233,.15)}
+
+.cta-row.r-work{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.2)}
+.cta-row.r-work:hover{background:rgba(245,158,11,.18);border-color:var(--amber);box-shadow:0 10px 32px rgba(245,158,11,.15)}
+
+.cta-note{
+  text-align:center;
+  font-size:.82rem;
+  color:rgba(255,255,255,.38);
+  margin-top:1.4rem;
+}
+
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
+.footer{
+  background:#06091a;
+  color:rgba(255,255,255,.55);
+  padding:4.5rem 5% 2rem;
+}
+.footer-top{
+  max-width:1240px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:3rem;
+  padding-bottom:3rem;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  margin-bottom:2rem;
+}
+.footer-brand h3{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.6rem;letter-spacing:.06em;
+  color:var(--snow);margin-bottom:.8rem;
+}
+.footer-brand p{font-size:.87rem;line-height:1.8;max-width:270px}
+
+.footer-col h4{
+  font-size:.75rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.18em;
+  color:rgba(255,255,255,.5);
+  margin-bottom:1.2rem;
+}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:.6rem}
+.footer-col a{
+  font-size:.87rem;
+  color:rgba(255,255,255,.5);
+  transition:color .2s;
+}
+.footer-col a:hover{color:var(--sky2)}
+
+.footer-bot{
+  max-width:1240px;margin:0 auto;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  font-size:.8rem;
+  color:rgba(255,255,255,.28);
+}
+
+/* Promo gallery */
+.promo-card:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,0,0,.2)!important}
+@media(max-width:768px){.promo-gallery{grid-template-columns:1fr!important}}
+
+/* ─────────────────────────────
+   REVEAL ANIMATIONS
+───────────────────────────── */
+.rv{
+  opacity:0;
+  transform:translateY(32px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1),
+             transform .7s cubic-bezier(.16,1,.3,1);
+}
+.rv.show{opacity:1;transform:translateY(0)}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+@media(max-width:1100px){
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .cases-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:900px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .about-inner{grid-template-columns:1fr;gap:3.5rem}
+  .contact-wrap{grid-template-columns:1fr;gap:3rem}
+  .pf-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-items{display:none}
+  .ham{display:flex}
+
+  .hero{padding:8rem 5% 4.5rem}
+  .hero-logo{max-width:100%}
+
+  .services,.portfolio,.cases,.testimonials,.about,.contact{padding:5rem 5%}
+  .stats-band{padding:3rem 5%}
+
+  .svc-cards{grid-template-columns:1fr}
+  .cases-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .pf-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .footer-bot{flex-direction:column;gap:.5rem;text-align:center}
+
+  .hero-cta{flex-direction:column}
+  .btn{width:100%}
+  .stat-n{font-size:2.6rem}
+}
+@media(max-width:480px){
+  .providers-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr}
+  .about-img-wrap::before{display:none}
+}
+    </style>
+</head>
+<body>
+
+<!-- ════ HEADER ════ -->
+<header class="header" id="hdr">
+  <nav class="nav">
+    <a href="#home" class="nav-logo">
+      <img src="tc_logo.jpeg" alt="TC">
+      <div>
+        <span class="nav-logo-name">Total Consulting</span>
+        <span class="nav-logo-sub jp">不動産・IT・集客をまとめて解決</span>
+      </div>
+    </a>
+    <ul class="nav-items">
+      <li><a href="#home" class="jp">ホーム</a></li>
+      <li><a href="#services" class="jp">サービス</a></li>
+      <li><a href="#portfolio" class="jp">制作実績</a></li>
+      <li><a href="#cases" class="jp">成功事例</a></li>
+      <li><a href="#testimonials" class="jp">お客様の声</a></li>
+      <li><a href="#about" class="jp">会社概要</a></li>
+      <li><a href="https://line.me/ti/p/6g79Rp7EdP" class="nav-cta jp" target="_blank">無料相談</a></li>
+    </ul>
+    <div class="ham" id="ham"><span></span><span></span><span></span></div>
+  </nav>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mob-nav" id="mobNav">
+  <a href="#home" class="jp">ホーム</a>
+  <a href="#services" class="jp">サービス</a>
+  <a href="#portfolio" class="jp">制作実績</a>
+  <a href="#cases" class="jp">成功事例</a>
+  <a href="#testimonials" class="jp">お客様の声</a>
+  <a href="#about" class="jp">会社概要</a>
+  <a href="https://line.me/ti/p/6g79Rp7EdP" class="jp" target="_blank">🟢 無料相談（LINE）</a>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="hero" id="home">
+  <div class="hero-mesh"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-line"></div>
+  <div class="hero-inner">
+    <div class="hero-logo-wrap">
+      <img src="hero_logo.jpeg" alt="Total Consulting" class="hero-logo">
+    </div>
+    <h1 class="jp"><span class="hl">IT・集客・不動産</span>を<br>全力サポート！</h1>
+    <p class="hero-sub jp">業界経験15年の実績。あなたのビジネスを包括的にサポートし、成功への最短ルートをご提案します。</p>
+    <div class="hero-pills">
+      <div class="pill jp"><span class="pi">🏆</span><span>業界15年の信頼</span></div>
+      <div class="pill jp"><span class="pi">💼</span><span>総合サポート</span></div>
+      <div class="pill jp"><span class="pi">📍</span><span>北九州拠点</span></div>
+      <div class="pill jp"><span class="pi">🌏</span><span>全国対応可能</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line jp" target="_blank">🟢 無料相談を予約（LINE）</a>
+      <a href="#services" class="btn btn-ghost jp">サービス詳細を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ STATS ════ -->
+<section class="stats-band">
+  <div class="stats-row">
+    <div class="stat-box rv"><span class="stat-n">500+</span><span class="stat-l jp">プロジェクト実績</span></div>
+    <div class="stat-box rv"><span class="stat-n">98%</span><span class="stat-l jp">顧客満足度</span></div>
+    <div class="stat-box rv"><span class="stat-n">15年</span><span class="stat-l jp">業界経験</span></div>
+    <div class="stat-box rv"><span class="stat-n">100+</span><span class="stat-l jp">企業サポート実績</span></div>
+  </div>
+</section>
+
+<!-- ════ SERVICES ════ -->
+<section class="services" id="services">
+  <div class="svc-banner rv">
+    <img src="service_image.jpeg" alt="IT・集客・不動産を全力サポート">
+  </div>
+  <div class="sec-header rv">
+    <span class="eyebrow jp">SERVICES</span>
+    <h2 class="section-h jp">事業内容</h2>
+    <p class="section-lead jp">6つの専門領域で、あなたのビジネスと生活をワンストップでサポートします</p>
+  </div>
+  <div class="svc-cards">
+    <div class="svc-card rv">
+      <div class="svc-ico">💻</div>
+      <h3>インターネット・モバイル・ITサポート</h3>
+      <p>通信環境の最適化から各種設定まで、ITのお悩みをまるごと解決します。</p>
+      <ul class="svc-ul">
+        <li>インターネット回線・モバイル新規加入/乗換相談</li>
+        <li>Wi-Fi・PC・スマホ設定/データ移行</li>
+        <li>訪問販売事業</li>
+        <li>コールセンター事業</li>
+      </ul>
+      <div class="svc-btns">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line btn-sm btn-full jp" target="_blank">🟢 LINEで相談する</a>
+      </div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-ico">🛡️</div>
+      <h3>保険・ライフプラン診断</h3>
+      <p>お客様のライフステージに合わせた最適な保険・ライフプランをご提案します。</p>
+      <ul class="svc-ul">
+        <li>楽天生命</li>
+        <li>ソニー生命</li>
+        <li>ライフプランニング作成</li>
+      </ul>
+      <div class="svc-btns">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line btn-sm btn-full jp" target="_blank">🟢 LINEで相談する</a>
+      </div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-ico">🏪</div>
+      <h3>開業支援</h3>
+      <p>店舗運営に必要な各種サービスの導入を代理店としてサポートします。</p>
+      <ul class="svc-ul">
+        <li>レジ.Pay導入代理店</li>
+        <li>フードデリバリー導入代理店</li>
+        <li>ライドシェア導入代理店</li>
+      </ul>
+      <div class="svc-btns">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line btn-sm btn-full jp" target="_blank">🟢 LINEで相談する</a>
+      </div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-ico">📱</div>
+      <h3>集客・コンサルティング事業</h3>
+      <p>SNSからAIまで最新のマーケティング手法で、あなたの集客を最大化します。</p>
+      <ul class="svc-ul">
+        <li>AIコンサル</li>
+        <li>SNS集客コンサル・運用代行</li>
+        <li>MEO・SEO対策</li>
+        <li>副業支援</li>
+        <li>独立支援</li>
+      </ul>
+      <div class="svc-btns">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line btn-sm btn-full jp" target="_blank">🟢 LINEで相談する</a>
+      </div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-ico">✏️</div>
+      <h3>業務支援・デザイン事業</h3>
+      <p>ホームページから名刺・チラシまで、プロ品質のデザイン制作をお任せください。</p>
+      <ul class="svc-ul">
+        <li>ホームページ/動画制作</li>
+        <li>名刺・チラシデザイン制作</li>
+        <li>メニュー・広告制作</li>
+        <li>データ作成・入力代行</li>
+      </ul>
+      <div class="svc-btns">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line btn-sm btn-full jp" target="_blank">🟢 LINEで相談する</a>
+      </div>
+    </div>
+    <div class="svc-card rv">
+      <div class="svc-ico">🏠</div>
+      <h3>不動産事業・人材・ライフサポート</h3>
+      <p>不動産から人材紹介・結婚相談まで、ビジネスと生活を幅広くサポートします。</p>
+      <ul class="svc-ul">
+        <li>不動産賃貸仲介・不動産売買仲介</li>
+        <li>人材派遣・人材紹介</li>
+        <li>転職・就職仲介</li>
+        <li>結婚相談所仲介</li>
+      </ul>
+      <div class="svc-btns">
+        <a href="https://rakusumu.jp/228470298/" class="btn btn-sky btn-sm btn-full jp" target="_blank">🏡 不動産のお問い合わせ</a>
+        <a href="https://career.rakusumu.jp/228470298/" class="btn btn-amber btn-sm btn-full jp" target="_blank">💼 転職・就職のお問い合わせ</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 制作メニュー PRイメージ -->
+  <div class="promo-gallery rv" style="max-width:1240px;margin:4rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+    <div class="promo-card" style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.13);transition:transform .35s ease,box-shadow .35s ease;">
+      <img src="promo_hp.jpeg" alt="魅力的なホームページ制作" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div class="promo-card" style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.13);transition:transform .35s ease,box-shadow .35s ease;">
+      <img src="promo_meishi.png" alt="高品質な名刺作成" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div class="promo-card" style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.13);transition:transform .35s ease,box-shadow .35s ease;">
+      <img src="promo_chirashi.jpeg" alt="高品質なチラシ作成" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+  <p class="jp rv" style="text-align:center;margin-top:1.2rem;color:#64748b;font-size:.9rem;">ホームページ制作・名刺・チラシなど、あらゆるデザイン制作をお任せください</p>
+</section>
+
+<!-- ════ PROVIDERS ════ -->
+<section class="providers">
+  <div class="providers-head rv">
+    <h2 class="jp">取扱商材</h2>
+    <p class="jp">主要キャリア・プロバイダを幅広くカバー。最適なプランをご提案します。</p>
+  </div>
+  <div class="providers-grid rv">
+    <div class="p-chip jp">楽天モバイル</div>
+    <div class="p-chip jp">SoftBank光・Air</div>
+    <div class="p-chip jp">au ひかり</div>
+    <div class="p-chip jp">au ケータイ</div>
+    <div class="p-chip jp">au でんき</div>
+    <div class="p-chip jp">ドコモ光</div>
+    <div class="p-chip jp">BIGLOBE光</div>
+    <div class="p-chip jp">JCOM</div>
+    <div class="p-chip jp">JCOM Mobile</div>
+    <div class="p-chip jp">So-net光</div>
+    <div class="p-chip jp">NURO光</div>
+    <div class="p-chip jp">BBIQ</div>
+    <div class="p-chip jp">QT mobile</div>
+    <div class="p-chip jp">ウォーターサーバー</div>
+    <div class="p-chip jp">ライフライン他</div>
+  </div>
+</section>
+
+<!-- ════ PORTFOLIO ════ -->
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="sec-header rv">
+      <span class="eyebrow jp">PORTFOLIO</span>
+      <h2 class="section-h light jp">制作実績</h2>
+      <p class="section-lead light jp">Total Consultingが手がけたデザイン制作物の一部をご紹介します</p>
+    </div>
+    <div class="pf-grid">
+      <div class="pf-card rv">
+        <div class="pf-img">
+          <span class="pf-badge jp">名刺</span>
+          <img src="portfolio1.png" alt="電脳聖域 らぶしぐなる">
+        </div>
+        <div class="pf-body">
+          <h3>電脳聖域 らぶ♡しぐなる</h3>
+          <p>北九州市小倉北区の店舗向け名刺デザイン。ポップなビジュアルに、Google Maps・Instagram・TikTokのQRコードを一枚に集約しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">名刺デザイン</span>
+            <span class="pf-sk jp">QRコード</span>
+            <span class="pf-sk jp">SNS連携</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img">
+          <span class="pf-badge jp">名刺</span>
+          <img src="portfolio2.jpeg" alt="ことぶき整骨院">
+        </div>
+        <div class="pf-body">
+          <h3>ことぶき整骨院</h3>
+          <p>北九州市小倉北区の整骨院向け名刺デザイン。院長情報・各種保険取扱・LINE/Instagramを清潔感あるレイアウトで制作しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">名刺デザイン</span>
+            <span class="pf-sk jp">医療・整骨院</span>
+            <span class="pf-sk jp">QRコード</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img">
+          <span class="pf-badge jp">メニュー表</span>
+          <img src="portfolio3.png" alt="ランチメニュー表">
+        </div>
+        <div class="pf-body">
+          <h3>ランチメニュー表</h3>
+          <p>飲食店向けお弁当・お惣菜メニュー表。桜モチーフの和テイストデザインで、親しみやすさと視認性を両立しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">メニューデザイン</span>
+            <span class="pf-sk jp">飲食店</span>
+            <span class="pf-sk jp">イラスト</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img">
+          <span class="pf-badge jp">名刺</span>
+          <img src="portfolio4.png" alt="Bar 天照">
+        </div>
+        <div class="pf-body">
+          <h3>Bar 天照（テンショウ）</h3>
+          <p>北九州市小倉北区のBar向け名刺デザイン。ネオン調のゴールド×ブラックで高級感と個性を演出し、InstagramのQRコードも配置しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">名刺デザイン</span>
+            <span class="pf-sk jp">Bar・飲食</span>
+            <span class="pf-sk jp">ネオンデザイン</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img">
+          <span class="pf-badge jp">名刺</span>
+          <img src="pf_taiken_meishi.jpeg" alt="泰建 総合建設業 名刺">
+        </div>
+        <div class="pf-body">
+          <h3>泰建（TAIKEN）｜総合建設業</h3>
+          <p>北九州市の総合建設業向け名刺デザイン。重機モチーフのメタリックロゴで力強さと信頼感を表現し、LINEのQRコードも配置しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">名刺デザイン</span>
+            <span class="pf-sk jp">建設業</span>
+            <span class="pf-sk jp">ロゴデザイン</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img tall">
+          <span class="pf-badge jp">広告</span>
+          <img src="pf_taiken_ad.jpeg" alt="泰建 事業案内広告">
+        </div>
+        <div class="pf-body">
+          <h3>泰建（TAIKEN）｜事業案内広告</h3>
+          <p>解体・土木・外構工事の事業案内広告。重厚感のあるビジュアルで対応工事を一覧化し、専門性の高さを訴求するデザインに仕上げました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">広告デザイン</span>
+            <span class="pf-sk jp">建設業</span>
+            <span class="pf-sk jp">事業案内</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img tall">
+          <span class="pf-badge jp">メニュー表</span>
+          <img src="pf_olivia.png" alt="Member's Olivia ドリンクメニュー">
+        </div>
+        <div class="pf-body">
+          <h3>Member's Olivia｜ドリンクメニュー</h3>
+          <p>会員制ラウンジ向けドリンクメニュー。エレガントな装飾と上品な配色で、高級感あふれる空間にふさわしいメニュー表を制作しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">メニューデザイン</span>
+            <span class="pf-sk jp">ラウンジ・Bar</span>
+            <span class="pf-sk jp">高級感</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img tall">
+          <span class="pf-badge jp">リーフレット</span>
+          <img src="pf_jester_leaflet.png" alt="JESTER BEES リーフレット">
+        </div>
+        <div class="pf-body">
+          <h3>Café & Bar JESTER BEES｜リーフレット</h3>
+          <p>アメリカンダイナー向け三つ折りリーフレット。ヴィンテージなアメリカン調デザインで、フード・ドリンク・アクセスを1枚に凝縮しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">リーフレット</span>
+            <span class="pf-sk jp">飲食店</span>
+            <span class="pf-sk jp">アメリカン</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img tall">
+          <span class="pf-badge jp">メニュー表</span>
+          <img src="pf_jester_food.png" alt="JESTER BEES フードメニュー">
+        </div>
+        <div class="pf-body">
+          <h3>JESTER BEES｜フードメニュー</h3>
+          <p>アメリカンダイナーのフードメニュー表。レトロで賑やかなデザインと美味しそうな料理写真で、注文したくなるビジュアルに仕上げました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">メニューデザイン</span>
+            <span class="pf-sk jp">飲食店</span>
+            <span class="pf-sk jp">アメリカン</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card rv">
+        <div class="pf-img tall">
+          <span class="pf-badge jp">メニュー表</span>
+          <img src="pf_jester_drink.png" alt="JESTER BEES ドリンクメニュー">
+        </div>
+        <div class="pf-body">
+          <h3>JESTER BEES｜ドリンクメニュー</h3>
+          <p>アメリカンダイナーのドリンクメニュー表。ウイスキー・カクテル・焼酎など豊富なラインナップを、レトロなポップデザインで見やすく整理しました。</p>
+          <div class="pf-skills">
+            <span class="pf-sk jp">メニューデザイン</span>
+            <span class="pf-sk jp">飲食店</span>
+            <span class="pf-sk jp">アメリカン</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CASES ════ -->
+<section class="cases" id="cases">
+  <div class="sec-header rv">
+    <span class="eyebrow jp">CASE STUDIES</span>
+    <h2 class="section-h jp">成功事例</h2>
+    <p class="section-lead jp">お客様の課題解決をサポートした実績の一部をご紹介します</p>
+  </div>
+  <div class="cases-grid">
+    <div class="cs-card rv">
+      <div class="cs-thumb c1"><span>🏢</span></div>
+      <div class="cs-body">
+        <h3>製造業A社様｜IT環境最適化</h3>
+        <p>社内IT環境の全面リニューアルと通信コスト削減を実現。年間通信費を35%削減しながら快適なネットワーク環境を構築しました。</p>
+        <div class="cs-result">💰 年間コスト削減: 35% ／ ⚡ 通信速度: 3倍向上</div>
+      </div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-thumb c2"><span>🍽️</span></div>
+      <div class="cs-body">
+        <h3>飲食店B様｜SNS集客強化</h3>
+        <p>SNSマーケティングとMEO対策により月間来店客数が2倍に増加。Googleマップの最適化で地域No.1の認知度を獲得しました。</p>
+        <div class="cs-result">📈 来店客数: 2倍増加 ／ ⭐ Google評価: 4.8</div>
+      </div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-thumb c3"><span>🛒</span></div>
+      <div class="cs-body">
+        <h3>小売業C社様｜EC売上4倍成長</h3>
+        <p>ECサイト構築とSNS運用代行により、月商300万円から1,200万円へと急成長。デジタルシフトを成功に導きました。</p>
+        <div class="cs-result">💹 売上: 4倍成長 ／ 🛒 EC化率: 60%達成</div>
+      </div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-thumb c4"><span>🏘️</span></div>
+      <div class="cs-body">
+        <h3>賃貸物件をお探しのD様</h3>
+        <p>希望条件に合った賃貸物件を迅速にご紹介。予算内で駅近・築浅の優良物件を見つけ、スムーズな入居手続きをサポートしました。</p>
+        <div class="cs-result">🏡 希望通りの物件を取得 ／ 😊 満足度: 非常に高い</div>
+      </div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-thumb c5"><span>💼</span></div>
+      <div class="cs-body">
+        <h3>IT企業E社様｜人材マッチング</h3>
+        <p>優秀なIT人材の派遣により開発プロジェクトを予定通り完遂。即戦力エンジニアのマッチングでプロジェクト成功率100%を達成しました。</p>
+        <div class="cs-result">👥 人材定着率: 98% ／ ✅ プロジェクト成功率: 100%</div>
+      </div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-thumb c6"><span>❤️</span></div>
+      <div class="cs-body">
+        <h3>個人F様｜結婚相談所で成婚</h3>
+        <p>結婚相談所サービスを通じて6ヶ月で理想のパートナーとご成婚。丁寧なカウンセリングと的確なマッチングで幸せな結婚へと導きました。</p>
+        <div class="cs-result">💑 成婚率: 業界トップクラス ／ ⏱️ 平均期間: 8ヶ月</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TESTIMONIALS ════ -->
+<section class="testimonials" id="testimonials">
+  <div class="sec-header rv">
+    <span class="eyebrow jp">TESTIMONIALS</span>
+    <h2 class="section-h jp">お客様の声</h2>
+    <p class="section-lead jp">Total Consultingをご利用いただいたお客様からの実際の声です</p>
+  </div>
+  <div class="testi-grid">
+    <div class="tc rv">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text jp">通信費が高くて悩んでいたところ、松田さんに相談したら最適なプランを提案してくれました。年間20万円以上のコスト削減ができて大満足です！</p>
+      <div class="tc-author">
+        <div class="tc-av">A</div>
+        <div>
+          <div class="tc-name jp">A社 代表取締役様</div>
+          <div class="tc-role jp">製造業 ／ 従業員50名</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text jp">SNS集客のノウハウがなく困っていましたが、丁寧にサポートしてくださり、今では予約が絶えない人気店になりました。本当に感謝しています！</p>
+      <div class="tc-author">
+        <div class="tc-av">B</div>
+        <div>
+          <div class="tc-name jp">B様</div>
+          <div class="tc-role jp">飲食店オーナー</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text jp">IT人材の確保に苦労していましたが、即戦力のエンジニアを紹介していただき、プロジェクトを無事完遂できました。また次回もお願いします！</p>
+      <div class="tc-author">
+        <div class="tc-av">C</div>
+        <div>
+          <div class="tc-name jp">C社 開発部長様</div>
+          <div class="tc-role jp">IT企業</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text jp">理想の賃貸物件を探すのは難しいと思っていましたが、親身になって相談に乗ってくださり、家族全員が納得できる部屋を見つけることができました！</p>
+      <div class="tc-author">
+        <div class="tc-av">D</div>
+        <div>
+          <div class="tc-name jp">D様ご家族</div>
+          <div class="tc-role jp">不動産賃貸仲介</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text jp">転職活動で悩んでいた時、的確なアドバイスをいただき、希望していたIT企業への転職が叶いました。年収も大幅にアップして感謝しかありません！</p>
+      <div class="tc-author">
+        <div class="tc-av">E</div>
+        <div>
+          <div class="tc-name jp">E様</div>
+          <div class="tc-role jp">IT業界 ／ 30代</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc rv">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text jp">結婚相談所を通じて半年で素敵なパートナーと出会えました。カウンセリングが丁寧で、安心してお任せできました。本当にありがとうございました！</p>
+      <div class="tc-author">
+        <div class="tc-av">F</div>
+        <div>
+          <div class="tc-name jp">F様</div>
+          <div class="tc-role jp">会社員 ／ 40代</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ ABOUT ════ -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap rv">
+      <img src="office_entrance.png" alt="Total Consulting オフィス" class="about-img">
+    </div>
+    <div class="about-txt rv">
+      <span class="eyebrow jp">ABOUT US</span>
+      <h2 class="jp">あなたのビジネスを<br>全面サポートします</h2>
+      <span class="exp-pill jp">🏆 業界15年の信頼！</span>
+      <p class="jp">Total Consultingは、福岡県北九州市を拠点に、不動産・ITサポート・集客コンサルティングの3つの柱でビジネスをサポートする総合コンサルティング会社です。</p>
+      <p class="jp">15年以上の業界経験を持つ代表・松田貴太が、豊富な知識と実績をもとに、お客様一人ひとりのニーズに合わせた最適なソリューションをご提案いたします。</p>
+      <div class="feat-list">
+        <div class="feat">
+          <div class="feat-ico">📈</div>
+          <div class="feat-txt">
+            <h4 class="jp">豊富な実績</h4>
+            <p class="jp">業界経験15年、数多くの企業・個人をサポートしてきた確かな実績</p>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat-ico">🔗</div>
+          <div class="feat-txt">
+            <h4 class="jp">ワンストップサービス</h4>
+            <p class="jp">IT・集客・不動産・人材を一社でまとめてお任せいただけます</p>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat-ico">🌏</div>
+          <div class="feat-txt">
+            <h4 class="jp">北九州拠点・全国対応</h4>
+            <p class="jp">北九州市を中心に九州全域、さらに全国のお客様にも対応します</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTACT ════ -->
+<section class="contact" id="contact">
+  <div class="sec-header rv">
+    <span class="eyebrow jp">CONTACT</span>
+    <h2 class="section-h light jp">お気軽にご相談ください</h2>
+    <p class="section-lead light jp">無料相談受付中！どんな小さなお悩みもまずはお気軽にどうぞ</p>
+  </div>
+  <div class="contact-wrap">
+    <div class="rv">
+      <h3 class="ci-title jp">お問い合わせ先</h3>
+      <div class="ci">
+        <div class="ci-icon">📞</div>
+        <div>
+          <div class="ci-lbl jp">電話</div>
+          <div class="ci-val jp">
+            <a href="tel:093-980-4781" style="color:inherit;">093-980-4781</a>（固定）<br>
+            <a href="tel:080-4282-1277" style="color:inherit;">080-4282-1277</a>（携帯）
+            <small>受付時間: 9:00〜18:00<br>（年中無休・土日祝日対応）</small>
+          </div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">✉️</div>
+        <div>
+          <div class="ci-lbl jp">メール</div>
+          <div class="ci-val jp">
+            <a href="mailto:totalconsulting39@gmail.com" style="color:inherit;transition:color .2s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='inherit'">totalconsulting39@gmail.com</a><br>
+            <a href="mailto:desperado-taka@softbank.ne.jp" style="color:inherit;transition:color .2s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='inherit'">desperado-taka@softbank.ne.jp</a>
+          </div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">📍</div>
+        <div>
+          <div class="ci-lbl jp">所在地</div>
+          <div class="ci-val jp">〒802-0071<br>福岡県北九州市小倉北区黄金1丁目9-22-305号</div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">👤</div>
+        <div>
+          <div class="ci-lbl jp">代表</div>
+          <div class="ci-val jp">松田 貴太（Matsuda Takahiro）</div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">🏢</div>
+        <div>
+          <div class="ci-lbl jp">会社概要</div>
+          <div class="ci-val jp">
+            株式会社MEEM
+            <small>
+              免許番号: 国土交通大臣(1)第10916号<br>
+              公益社団法人 全日本不動産協会<br>
+              販売代理店届出番号: J2127199
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="sns-row">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="sns-ico" title="LINE" target="_blank">📱</a>
+        <a href="#" class="sns-ico" title="Instagram">📷</a>
+        <a href="#" class="sns-ico" title="Google">🔍</a>
+        <a href="#" class="sns-ico" title="TikTok">🎵</a>
+      </div>
+    </div>
+    <div class="cta-box rv">
+      <h3 class="jp">各種お問い合わせ</h3>
+      <p class="sub jp">目的に合わせてお選びください。すべて無料でご相談いただけます。</p>
+      <div class="cta-list">
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="cta-row r-line" target="_blank">
+          <div class="cr-left">
+            <span class="cr-icon">💬</span>
+            <div class="cr-texts">
+              <span class="cr-title jp">無料相談・その他のお問い合わせ</span>
+              <span class="cr-sub jp">LINE / IT・集客・人材・結婚相談はこちら</span>
+            </div>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+        <a href="https://rakusumu.jp/228470298/" class="cta-row r-house" target="_blank">
+          <div class="cr-left">
+            <span class="cr-icon">🏠</span>
+            <div class="cr-texts">
+              <span class="cr-title jp">不動産のお問い合わせ</span>
+              <span class="cr-sub jp">賃貸・売買物件のご相談はこちら</span>
+            </div>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+        <a href="https://career.rakusumu.jp/228470298/" class="cta-row r-work" target="_blank">
+          <div class="cr-left">
+            <span class="cr-icon">💼</span>
+            <div class="cr-texts">
+              <span class="cr-title jp">転職・就職のお問い合わせ</span>
+              <span class="cr-sub jp">キャリア相談・求人のご相談はこちら</span>
+            </div>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+      </div>
+      <p class="cta-note jp">24時間受付 ／ まずはお気軽にどうぞ</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Total Consulting</h3>
+      <p class="jp">不動産も、保険も、ITも、集客も、まとめて解決。業界15年の実績で、あなたのビジネスと生活を全力でサポートします。</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="jp">サービス</h4>
+      <ul>
+        <li><a href="#services" class="jp">ITサポート</a></li>
+        <li><a href="#services" class="jp">保険・ライフプラン</a></li>
+        <li><a href="#services" class="jp">開業支援</a></li>
+        <li><a href="#services" class="jp">集客・コンサル</a></li>
+        <li><a href="#services" class="jp">不動産・人材</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="jp">コンテンツ</h4>
+      <ul>
+        <li><a href="#portfolio" class="jp">制作実績</a></li>
+        <li><a href="#cases" class="jp">成功事例</a></li>
+        <li><a href="#testimonials" class="jp">お客様の声</a></li>
+        <li><a href="#about" class="jp">会社概要</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="jp">お問い合わせ</h4>
+      <ul>
+        <li><a href="https://line.me/ti/p/6g79Rp7EdP" target="_blank" class="jp">無料相談（LINE）</a></li>
+        <li><a href="https://rakusumu.jp/228470298/" target="_blank" class="jp">不動産のご相談</a></li>
+        <li><a href="https://career.rakusumu.jp/228470298/" target="_blank" class="jp">転職・就職のご相談</a></li>
+        <li><a href="tel:093-980-4781" class="jp">093-980-4781（固定）</a></li>
+        <li><a href="tel:080-4282-1277" class="jp">080-4282-1277（携帯）</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span class="jp">&copy; 2026 Total Consulting（株式会社MEEM）. All rights reserved.</span>
+    <span class="jp">〒802-0071 福岡県北九州市小倉北区黄金1丁目9-22-305号</span>
+  </div>
+</footer>
+
+<script>
+/* ── HEADER SCROLL ── */
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive:true});
+
+/* ── HAMBURGER ── */
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mobNav');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mob.classList.toggle('open');
+});
+document.querySelectorAll('.mob-nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mob.classList.remove('open');
+  });
+});
+document.addEventListener('click', e => {
+  if (!ham.contains(e.target) && !mob.contains(e.target)) {
+    ham.classList.remove('open');
+    mob.classList.remove('open');
+  }
+});
+
+/* ── SMOOTH SCROLL (header-offset aware) ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const id = this.getAttribute('href');
+    if (id === '#') return;
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    window.scrollTo({
+      top: el.getBoundingClientRect().top + window.scrollY - 80,
+      behavior: 'smooth'
+    });
+  });
+});
+
+/* ── REVEAL ON SCROLL ── */
+const rvEls = document.querySelectorAll('.rv');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      io.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.1, rootMargin: '0px 0px -36px 0px'});
+
+/* stagger siblings in grids */
+document.querySelectorAll(
+  '.stats-row, .svc-cards, .pf-grid, .cases-grid, .testi-grid'
+).forEach(grid => {
+  grid.querySelectorAll('.rv').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.1) + 's';
+  });
+});
+
+rvEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
