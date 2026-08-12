@@ -579,6 +579,71 @@ section[id]{scroll-margin-top:76px}
   transform:translateY(-3px);
   box-shadow:0 6px 18px rgba(14,165,233,.12);
 }
+/* 楽天モバイル 特集リンクチップ */
+.p-chip-rakuten{
+  display:block;
+  background:linear-gradient(135deg,#bf0000,#e60000);
+  border-color:#bf0000;
+  color:#fff !important;
+  text-decoration:none;
+  box-shadow:0 4px 14px rgba(191,0,0,.25);
+}
+.p-chip-rakuten:hover{
+  background:linear-gradient(135deg,#a00000,#c50000);
+  border-color:#a00000;
+  color:#fff !important;
+  transform:translateY(-3px);
+  box-shadow:0 8px 22px rgba(191,0,0,.4);
+}
+/* 楽天モバイル 特集バナー */
+.rakuten-banner{
+  max-width:1240px;
+  margin:2.5rem auto 0;
+  background:linear-gradient(120deg,#bf0000 0%,#8b0000 100%);
+  border-radius:20px;
+  padding:2rem 2.4rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+  box-shadow:0 12px 40px rgba(191,0,0,.25);
+  position:relative;overflow:hidden;
+}
+.rakuten-banner::before{
+  content:'';position:absolute;
+  right:-5%;top:-40%;
+  width:340px;height:340px;
+  background:radial-gradient(circle,rgba(255,255,255,.12),transparent 65%);
+  border-radius:50%;
+}
+.rakuten-banner-text{position:relative;z-index:1}
+.rakuten-banner-label{
+  display:inline-block;
+  background:rgba(255,255,255,.2);
+  color:#fff;font-size:.75rem;font-weight:700;
+  padding:.25rem .9rem;border-radius:50px;
+  margin-bottom:.7rem;
+}
+.rakuten-banner h3{
+  color:#fff;font-size:1.35rem;font-weight:900;
+  line-height:1.35;margin-bottom:.5rem;
+}
+.rakuten-banner p{color:rgba(255,255,255,.9);font-size:.95rem}
+.rakuten-banner-btn{
+  position:relative;z-index:1;
+  background:#fff;color:#bf0000;
+  font-weight:800;font-size:1rem;
+  padding:.9rem 2rem;border-radius:50px;
+  white-space:nowrap;
+  transition:transform .25s,box-shadow .25s;
+  flex-shrink:0;
+}
+.rakuten-banner-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 28px rgba(0,0,0,.2);
+}
+@media(max-width:768px){
+  .rakuten-banner{flex-direction:column;text-align:center;padding:1.8rem 1.5rem}
+  .rakuten-banner-btn{width:100%;text-align:center}
+}
 
 /* ─────────────────────────────
    PORTFOLIO
@@ -1325,7 +1390,7 @@ section[id]{scroll-margin-top:76px}
     <p class="jp">主要キャリア・プロバイダを幅広くカバー。最適なプランをご提案します。</p>
   </div>
   <div class="providers-grid rv">
-    <div class="p-chip jp">楽天モバイル</div>
+    <a href="rakuten.html" class="p-chip p-chip-rakuten jp">楽天モバイル 📱</a>
     <div class="p-chip jp">SoftBank光・Air</div>
     <div class="p-chip jp">au ひかり</div>
     <div class="p-chip jp">au ケータイ</div>
@@ -1340,6 +1405,14 @@ section[id]{scroll-margin-top:76px}
     <div class="p-chip jp">QT mobile</div>
     <div class="p-chip jp">ウォーターサーバー</div>
     <div class="p-chip jp">ライフライン他</div>
+  </div>
+  <div class="rakuten-banner rv">
+    <div class="rakuten-banner-text">
+      <span class="rakuten-banner-label">📱 特集ページ</span>
+      <h3 class="jp">楽天モバイルの料金・端末を、わかりやすく比較</h3>
+      <p class="jp">使った分だけ、最大でも月額3,278円。乗り換え・端末選びを無料でご案内します。</p>
+    </div>
+    <a href="rakuten.html" class="rakuten-banner-btn jp">詳しく見る →</a>
   </div>
 </section>
 
@@ -1761,8 +1834,9 @@ section[id]{scroll-margin-top:76px}
         <div>
           <div class="ci-lbl jp">会社概要</div>
           <div class="ci-val jp">
-            株式会社MEEM
+            Total Consulting
             <small>
+              運営: 株式会社MEEM<br>
               免許番号: 国土交通大臣(1)第10916号<br>
               公益社団法人 全日本不動産協会<br>
               販売代理店届出番号: J2127199
