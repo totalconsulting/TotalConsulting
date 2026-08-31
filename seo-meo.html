@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO・MEO対策 | 検索とGoogleマップで見つけてもらう集客支援 | Total Consulting</title>
+<meta name="description" content="中小企業のためのSEO・MEO対策をワンストップで代行。検索エンジンとGoogleマップの両方で上位表示を狙い、Web集客を仕組み化します。北九州のTotal Consultingが無料診断からサポート。">
+<meta property="og:title" content="SEO・MEO対策 | Total Consulting">
+<meta property="og:description" content="検索とGoogleマップの両方で見つけてもらう。中小企業のためのWeb集客支援。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1120;
+  --ink2:#162035;
+  --steel:#2a4270;
+  --sky:#0ea5e9;
+  --sky2:#38bdf8;
+  --amber:#f59e0b;
+  --amber2:#fbbf24;
+  --green:#22c55e;
+  --snow:#ffffff;
+  --mist:#f1f5f9;
+  --slate:#64748b;
+  --r:14px;
+  --rl:22px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans','Noto Sans JP',sans-serif;color:var(--ink);background:var(--snow);line-height:1.75;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.jp{font-family:'Noto Sans JP',sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 5%}
+section[id]{scroll-margin-top:76px}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 2.1rem;border-radius:50px;font-weight:800;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-3px)}
+.btn-amber{background:linear-gradient(135deg,var(--amber),#d97706);color:#fff;box-shadow:0 8px 24px rgba(245,158,11,.35)}
+.btn-amber:hover{box-shadow:0 14px 34px rgba(245,158,11,.5)}
+.btn-line{background:#06c755;color:#fff;box-shadow:0 8px 24px rgba(6,199,85,.3)}
+.btn-line:hover{box-shadow:0 14px 34px rgba(6,199,85,.5)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-sky{background:transparent;color:var(--sky);border-color:var(--sky)}
+.btn-sky:hover{background:var(--sky);color:#fff}
+
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(11,17,32,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.hdr-in{max-width:1120px;margin:0 auto;padding:.7rem 5%;display:flex;align-items:center;justify-content:space-between}
+.hdr-brand{display:flex;flex-direction:column;color:#fff}
+.hdr-brand .n{font-family:'Bebas Neue';font-size:1.3rem;letter-spacing:.05em;line-height:1}
+.hdr-brand .s{font-size:.62rem;color:var(--sky2);font-weight:500}
+.hdr-cta{background:linear-gradient(135deg,var(--amber),#d97706);color:#fff;padding:.5rem 1.3rem;border-radius:50px;font-weight:700;font-size:.85rem;transition:transform .2s,box-shadow .2s}
+.hdr-cta:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(245,158,11,.45)}
+
+/* HERO */
+.hero{position:relative;background:var(--ink);color:#fff;padding:5rem 5% 4.5rem;overflow:hidden}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 25%,rgba(14,165,233,.2),transparent 55%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(245,158,11,.1),transparent 55%)}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:48px 48px}
+.hero-in{position:relative;z-index:1;max-width:1120px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.3);color:var(--sky2);font-size:.78rem;font-weight:700;letter-spacing:.1em;padding:.35rem 1.1rem;border-radius:50px;margin-bottom:1.5rem}
+.hero-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--sky2);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:900;line-height:1.25;margin-bottom:1.4rem;letter-spacing:-.01em}
+.hero h1 .hl{background:linear-gradient(120deg,var(--sky2),#bae6fd,var(--amber2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(1rem,2.3vw,1.2rem);color:rgba(255,255,255,.8);max-width:640px;margin-bottom:2.4rem;line-height:1.85}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+
+/* HERO ranking mock */
+.rank-mock{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--rl);padding:1.5rem;max-width:560px;backdrop-filter:blur(6px)}
+.rank-mock-head{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.6);margin-bottom:1rem;font-weight:600}
+.rank-mock-head .g{display:flex;gap:.25rem}
+.rank-mock-head .g span{width:9px;height:9px;border-radius:50%}
+.rank-row{display:flex;align-items:center;gap:.9rem;padding:.6rem .8rem;border-radius:10px;margin-bottom:.4rem;font-size:.9rem;transition:all .3s}
+.rank-row .pos{font-family:'Bebas Neue';font-size:1.3rem;width:28px;text-align:center;flex-shrink:0}
+.rank-row.you{background:linear-gradient(135deg,rgba(34,197,94,.2),rgba(14,165,233,.15));border:1px solid rgba(34,197,94,.4)}
+.rank-row.you .pos{color:var(--green)}
+.rank-row.dim{color:rgba(255,255,255,.4)}
+.rank-row.dim .pos{color:rgba(255,255,255,.3)}
+.rank-row .bar{flex:1;height:8px;background:rgba(255,255,255,.1);border-radius:50px;overflow:hidden}
+.rank-row .bar i{display:block;height:100%;border-radius:50px;background:linear-gradient(90deg,var(--sky),var(--green))}
+.rank-row .up{color:var(--green);font-size:.78rem;font-weight:700;white-space:nowrap}
+
+/* SECTION */
+.sec{padding:5rem 5%}
+.sec-in{max-width:1120px;margin:0 auto}
+.sec-head{text-align:center;margin-bottom:3rem}
+.eyebrow{display:inline-block;color:var(--sky);font-weight:800;font-size:.8rem;letter-spacing:.14em;margin-bottom:.7rem}
+.sec-title{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;line-height:1.3}
+.sec-title.light{color:#fff}
+.sec-lead{color:var(--slate);margin-top:.9rem;font-size:1.03rem;max-width:600px;margin-left:auto;margin-right:auto}
+.sec-lead.light{color:rgba(255,255,255,.72)}
+
+/* PAIN POINTS */
+.pain{background:var(--mist)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.pain-card{background:#fff;border-radius:var(--rl);padding:2rem 1.6rem;border:1px solid #e2e8f0;transition:transform .3s,box-shadow .3s}
+.pain-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.pain-ico{font-size:2.2rem;margin-bottom:.8rem}
+.pain-card h3{font-size:1.12rem;font-weight:800;margin-bottom:.5rem;line-height:1.45}
+.pain-card p{font-size:.92rem;color:var(--slate)}
+
+/* WHAT: SEO vs MEO */
+.what{background:#fff}
+.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;margin-bottom:2rem}
+.what-card{border-radius:var(--rl);padding:2.4rem;color:#fff;position:relative;overflow:hidden}
+.what-card.seo{background:linear-gradient(150deg,#1e4d8c,#0f2d5c)}
+.what-card.meo{background:linear-gradient(150deg,#0f766e,#134e4a)}
+.what-card::after{content:'';position:absolute;right:-15%;top:-30%;width:260px;height:260px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 65%);border-radius:50%}
+.what-tag{display:inline-block;background:rgba(255,255,255,.2);font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:.25rem .9rem;border-radius:50px;margin-bottom:1rem}
+.what-card h3{font-size:1.5rem;font-weight:900;margin-bottom:.4rem;position:relative;z-index:1}
+.what-card .desc{font-size:.95rem;opacity:.88;margin-bottom:1.4rem;position:relative;z-index:1}
+.what-list{list-style:none;position:relative;z-index:1}
+.what-list li{display:flex;align-items:flex-start;gap:.6rem;padding:.4rem 0;font-size:.92rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.what-list li:last-child{border:none}
+.what-list li::before{content:'✓';font-weight:800;flex-shrink:0}
+.what-combine{text-align:center;background:linear-gradient(135deg,var(--amber),#d97706);color:#fff;border-radius:var(--rl);padding:1.8rem;font-weight:800;font-size:1.15rem}
+.what-combine span{display:block;font-size:.88rem;font-weight:500;opacity:.9;margin-top:.4rem}
+
+/* FLOW */
+.flow{background:var(--ink);color:#fff}
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;position:relative}
+.flow-step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:1.8rem 1.3rem;transition:all .3s}
+.flow-step:hover{border-color:rgba(14,165,233,.4);transform:translateY(-5px)}
+.flow-num{font-family:'Bebas Neue';font-size:2.4rem;color:var(--sky2);line-height:1;margin-bottom:.5rem}
+.flow-step h4{font-size:1.05rem;font-weight:800;margin-bottom:.4rem}
+.flow-step p{font-size:.85rem;color:rgba(255,255,255,.6)}
+
+/* PRICING */
+.price{background:var(--mist)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;align-items:stretch}
+.price-card{background:#fff;border-radius:var(--rl);padding:2.2rem 1.8rem;border:2px solid #e2e8f0;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 16px 44px rgba(0,0,0,.1)}
+.price-card.feat{border-color:var(--sky);position:relative}
+.price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--sky);color:#fff;font-size:.75rem;font-weight:700;padding:.25rem 1rem;border-radius:50px}
+.price-name{font-size:1.15rem;font-weight:800;margin-bottom:.3rem}
+.price-tag{font-size:.85rem;color:var(--slate);margin-bottom:1.2rem}
+.price-amount{font-size:2rem;font-weight:900;color:var(--ink);line-height:1;margin-bottom:.2rem}
+.price-amount small{font-size:.9rem;color:var(--slate);font-weight:600}
+.price-note{font-size:.78rem;color:var(--slate);margin-bottom:1.4rem}
+.price-list{list-style:none;flex:1;margin-bottom:1.6rem}
+.price-list li{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;font-size:.88rem;color:var(--ink2);border-bottom:1px solid #f1f5f9}
+.price-list li:last-child{border:none}
+.price-list li::before{content:'✓';color:var(--sky);font-weight:700;flex-shrink:0}
+.price-disclaimer{text-align:center;font-size:.82rem;color:var(--slate);margin-top:1.8rem}
+
+/* WHY US */
+.whyus{background:#fff}
+.whyus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.whyus-card{display:flex;gap:1rem;padding:1.6rem;background:var(--mist);border-radius:var(--r);border:1px solid #e8edf3;transition:transform .25s}
+.whyus-card:hover{transform:translateX(5px)}
+.whyus-ico{width:44px;height:44px;background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(30,66,159,.1));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.whyus-card h4{font-size:1rem;font-weight:800;margin-bottom:.3rem}
+.whyus-card p{font-size:.86rem;color:var(--slate);line-height:1.65}
+
+/* FAQ */
+.faq{background:var(--mist)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid #e2e8f0;border-radius:var(--r);margin-bottom:1rem;overflow:hidden}
+.faq-q{padding:1.3rem 1.6rem;font-weight:700;font-size:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .2s}
+.faq-q:hover{background:#f8fafc}
+.faq-q .mark{color:var(--sky);font-size:1.4rem;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q .mark{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--slate);font-size:.93rem}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-in{padding:0 1.6rem 1.4rem}
+
+/* FINAL */
+.final{background:linear-gradient(150deg,var(--ink2),var(--ink));color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;right:-10%;bottom:-30%;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.12),transparent 65%);border-radius:50%}
+.final-in{position:relative;z-index:1;max-width:720px;margin:0 auto}
+.final h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:900;margin-bottom:1rem;line-height:1.35}
+.final p{color:rgba(255,255,255,.72);font-size:1.03rem;margin-bottom:2.2rem}
+.final-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.2rem}
+.final-contact{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;padding-top:2rem;border-top:1px solid rgba(255,255,255,.12);font-size:.95rem}
+.final-contact a{color:#fff;font-weight:700}
+.final-contact .lbl{color:rgba(255,255,255,.55);font-size:.8rem;display:block;margin-bottom:.2rem}
+
+/* FOOTER */
+.foot{background:#06091a;color:rgba(255,255,255,.5);padding:2.5rem 5%;text-align:center;font-size:.82rem}
+.foot .back{display:inline-block;margin-bottom:1.2rem;color:rgba(255,255,255,.8);font-weight:700;border:1px solid rgba(255,255,255,.2);padding:.5rem 1.4rem;border-radius:50px;transition:all .2s}
+.foot .back:hover{background:rgba(255,255,255,.1);color:#fff}
+.foot .disc{max-width:820px;margin:0 auto 1rem;font-size:.76rem;line-height:1.7}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.show{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .pain-grid{grid-template-columns:1fr}
+  .what-grid{grid-template-columns:1fr}
+  .flow-steps{grid-template-columns:1fr 1fr}
+  .price-grid{grid-template-columns:1fr}
+  .whyus-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .hero-ctas{flex-direction:column}
+  .btn{width:100%}
+  .flow-steps{grid-template-columns:1fr}
+  .final-ctas{flex-direction:column}
+  .final-ctas .btn{width:100%}
+  .sec{padding:3.5rem 5%}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html" class="hdr-brand">
+      <span class="n">Total Consulting</span>
+      <span class="s jp">SEO・MEO対策サービス</span>
+    </a>
+    <a href="https://line.me/ti/p/6g79Rp7EdP" class="hdr-cta jp" target="_blank">無料診断</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-in">
+    <span class="hero-eyebrow jp">SEO × MEO 対策</span>
+    <h1 class="jp">「検索」と「地図」の<br>両方で、<span class="hl">見つけてもらう。</span></h1>
+    <p class="hero-sub jp">ホームページを作っただけでは、お客様には届きません。Googleの検索結果とマップの両方で上位に表示させ、"探している人"を集める仕組みを、中小企業向けにまるごと代行します。</p>
+    <div class="hero-ctas">
+      <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line jp" target="_blank">🟢 無料で集客診断を受ける</a>
+      <a href="#price" class="btn btn-ghost jp">料金プランを見る</a>
+    </div>
+
+    <div class="rank-mock">
+      <div class="rank-mock-head">
+        <span class="g"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></span>
+        <span class="jp">「地域名 + 業種」の検索結果イメージ</span>
+      </div>
+      <div class="rank-row you">
+        <span class="pos">1</span>
+        <span class="jp" style="font-weight:700">あなたのお店・会社</span>
+        <span class="bar"><i style="width:92%"></i></span>
+        <span class="up jp">↑ 上位表示</span>
+      </div>
+      <div class="rank-row dim">
+        <span class="pos">2</span>
+        <span class="jp">競合A社</span>
+        <span class="bar"><i style="width:60%"></i></span>
+      </div>
+      <div class="rank-row dim">
+        <span class="pos">3</span>
+        <span class="jp">競合B社</span>
+        <span class="bar"><i style="width:45%"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="sec pain">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="eyebrow jp">SUCH TROUBLES</span>
+      <h2 class="sec-title jp">こんなお悩み、ありませんか？</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card rv">
+        <div class="pain-ico">😟</div>
+        <h3 class="jp">ホームページはあるのに<br>問い合わせが来ない</h3>
+        <p class="jp">せっかく作ったサイトが検索で見つからず、訪問者がほとんどいない。作っただけで満足してしまっている状態です。</p>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-ico">🗺️</div>
+        <h3 class="jp">Googleマップで<br>競合に埋もれている</h3>
+        <p class="jp">「地域名＋業種」で検索したとき、上位に出てくるのはいつも競合ばかり。マップからの来店・問い合わせを取りこぼしています。</p>
+      </div>
+      <div class="pain-card rv">
+        <div class="pain-ico">💸</div>
+        <h3 class="jp">広告費ばかり<br>かさんでいく</h3>
+        <p class="jp">リスティング広告を止めると集客もゼロに。払い続けないと客が来ない体質から抜け出せずにいます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT: SEO vs MEO -->
+<section class="sec what" id="what">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="eyebrow jp">SEO & MEO</span>
+      <h2 class="sec-title jp">SEOとMEO、両方やるから強い</h2>
+      <p class="sec-lead jp">検索結果とGoogleマップは、それぞれ役割が違います。片方だけでは取りこぼす見込み客を、両輪でしっかり拾います。</p>
+    </div>
+    <div class="what-grid">
+      <div class="what-card seo rv">
+        <span class="what-tag jp">SEO</span>
+        <h3 class="jp">検索エンジン最適化</h3>
+        <p class="desc jp">Google検索で上位に表示させ、"調べている人"をサイトに呼び込みます。</p>
+        <ul class="what-list jp">
+          <li>キーワード設計・競合分析</li>
+          <li>サイト内部の最適化（タイトル・構造）</li>
+          <li>コンテンツ・ブログ記事の制作</li>
+          <li>表示速度・スマホ対応の改善</li>
+        </ul>
+      </div>
+      <div class="what-card meo rv">
+        <span class="what-tag jp">MEO</span>
+        <h3 class="jp">マップエンジン最適化</h3>
+        <p class="desc jp">Googleマップで上位表示させ、"近くで探している人"の来店・問い合わせに繋げます。</p>
+        <ul class="what-list jp">
+          <li>Googleビジネスプロフィール最適化</li>
+          <li>口コミの獲得・返信サポート</li>
+          <li>写真・最新情報の定期投稿</li>
+          <li>店舗情報（NAP）の統一管理</li>
+        </ul>
+      </div>
+    </div>
+    <div class="what-combine jp rv">
+      SEO × MEO のダブル対策で、検索する人にも、近くで探す人にも見つけてもらう
+      <span>だから、広告に頼らなくても "見込み客が自然に集まる" 仕組みができます。</span>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="sec flow" id="flow">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="eyebrow jp" style="color:var(--sky2)">FLOW</span>
+      <h2 class="sec-title light jp">ご依頼から成果までの流れ</h2>
+      <p class="sec-lead light jp">まずは無料診断から。現状を分析して、必要な対策だけをご提案します。</p>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step rv">
+        <div class="flow-num">01</div>
+        <h4 class="jp">無料集客診断</h4>
+        <p class="jp">現在の検索順位・マップ表示・サイトの状態を無料でチェックし、課題を洗い出します。</p>
+      </div>
+      <div class="flow-step rv">
+        <div class="flow-num">02</div>
+        <h4 class="jp">ご提案・お見積り</h4>
+        <p class="jp">診断結果をもとに、必要な施策と費用をわかりやすくご提案。ご予算に合わせて調整します。</p>
+      </div>
+      <div class="flow-step rv">
+        <div class="flow-num">03</div>
+        <h4 class="jp">施策の実行</h4>
+        <p class="jp">サイト改善・プロフィール最適化・コンテンツ制作などを、私たちが代行して進めます。</p>
+      </div>
+      <div class="flow-step rv">
+        <div class="flow-num">04</div>
+        <h4 class="jp">効果測定・改善</h4>
+        <p class="jp">順位やアクセスの変化を定期レポート。結果を見ながら継続的に改善していきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec price" id="price">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="eyebrow jp">PRICE</span>
+      <h2 class="sec-title jp">料金プラン</h2>
+      <p class="sec-lead jp">中小企業でも始めやすい料金設定。まずは小さく始めて、成果を見ながら拡張できます。</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card rv">
+        <div class="price-name jp">MEOスタート</div>
+        <div class="price-tag jp">まずはマップ対策から</div>
+        <div class="price-amount jp">要お見積り</div>
+        <div class="price-note jp">Googleマップ集客に絞ったプラン</div>
+        <ul class="price-list jp">
+          <li>Googleビジネスプロフィール初期設定・最適化</li>
+          <li>口コミ獲得の仕組みづくり</li>
+          <li>月次の投稿・情報更新</li>
+          <li>順位レポート</li>
+        </ul>
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-sky jp" target="_blank" style="width:100%">相談する</a>
+      </div>
+      <div class="price-card feat rv">
+        <span class="price-badge jp">人気</span>
+        <div class="price-name jp">SEO×MEO 総合</div>
+        <div class="price-tag jp">検索とマップを両方対策</div>
+        <div class="price-amount jp">要お見積り</div>
+        <div class="price-note jp">いちばん成果が出やすいプラン</div>
+        <ul class="price-list jp">
+          <li>MEOスタートの全内容</li>
+          <li>サイト内部SEO改善</li>
+          <li>キーワード設計・競合分析</li>
+          <li>コンテンツ・ブログ記事制作</li>
+          <li>月次の分析レポート・改善提案</li>
+        </ul>
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-amber jp" target="_blank" style="width:100%">無料診断を受ける</a>
+      </div>
+      <div class="price-card rv">
+        <div class="price-name jp">Web集客まるごと</div>
+        <div class="price-tag jp">サイト制作から一括で</div>
+        <div class="price-amount jp">要お見積り</div>
+        <div class="price-note jp">ホームページ制作込みのフルサポート</div>
+        <ul class="price-list jp">
+          <li>SEO×MEO総合の全内容</li>
+          <li>ホームページ制作・リニューアル</li>
+          <li>SNS運用・広告運用の連携</li>
+          <li>専任担当による継続サポート</li>
+        </ul>
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-sky jp" target="_blank" style="width:100%">相談する</a>
+      </div>
+    </div>
+    <p class="price-disclaimer jp">※料金は業種・エリア・競合状況・対策範囲によって異なります。まずは無料診断で最適なプランをご提案します。</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec whyus">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="eyebrow jp">WHY US</span>
+      <h2 class="sec-title jp">Total Consultingが選ばれる理由</h2>
+    </div>
+    <div class="whyus-grid">
+      <div class="whyus-card rv">
+        <div class="whyus-ico">🔗</div>
+        <div>
+          <h4 class="jp">ワンストップ対応</h4>
+          <p class="jp">SEO・MEO・サイト制作・SNSまで一社で完結。複数の業者に発注する手間がありません。</p>
+        </div>
+      </div>
+      <div class="whyus-card rv">
+        <div class="whyus-ico">📊</div>
+        <div>
+          <h4 class="jp">成果が見える</h4>
+          <p class="jp">順位やアクセス数を定期レポートで報告。何がどう良くなったか、数字で確認できます。</p>
+        </div>
+      </div>
+      <div class="whyus-card rv">
+        <div class="whyus-ico">🏆</div>
+        <div>
+          <h4 class="jp">業界15年の実績</h4>
+          <p class="jp">IT・集客の現場を熟知したノウハウで、中小企業の"身の丈に合った"対策をご提案します。</p>
+        </div>
+      </div>
+      <div class="whyus-card rv">
+        <div class="whyus-ico">💬</div>
+        <div>
+          <h4 class="jp">相談しやすい距離感</h4>
+          <p class="jp">LINEや電話で気軽に相談OK。専門用語を並べず、わかる言葉で説明します。</p>
+        </div>
+      </div>
+      <div class="whyus-card rv">
+        <div class="whyus-ico">🎯</div>
+        <div>
+          <h4 class="jp">ムダのない提案</h4>
+          <p class="jp">必要な施策だけをご提案。「とりあえず全部」という押し売りはしません。</p>
+        </div>
+      </div>
+      <div class="whyus-card rv">
+        <div class="whyus-ico">📍</div>
+        <div>
+          <h4 class="jp">地域集客に強い</h4>
+          <p class="jp">地域名での検索・マップ対策が得意。地元のお客様を集めたい事業者に最適です。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="eyebrow jp">FAQ</span>
+      <h2 class="sec-title jp">よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item rv">
+        <div class="faq-q jp">どのくらいで効果が出ますか？ <span class="mark">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in jp">MEO（マップ対策）は比較的早く、数週間〜数ヶ月で変化が見え始めることが多いです。SEO（検索対策）は3〜6ヶ月ほどかけてじっくり育てていくものです。業種や競合状況によって差があるため、無料診断で目安をお伝えします。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q jp">ホームページがなくても依頼できますか？ <span class="mark">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in jp">はい。MEO（Googleマップ対策）はホームページがなくても始められます。サイトも必要でしたら、制作からまとめてお引き受けできます。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q jp">今の業者から乗り換えできますか？ <span class="mark">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in jp">もちろん可能です。現在の状況を無料診断で確認し、改善できる点をご提案します。乗り換えの手続きもサポートします。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q jp">契約期間の縛りはありますか？ <span class="mark">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in jp">プランによって異なります。まずは小さく始めて成果を見ながら判断いただけるよう、柔軟に対応しています。詳しくは無料診断時にご説明します。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q jp">相談だけでも大丈夫ですか？ <span class="mark">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in jp">大歓迎です。無料診断・ご相談だけでも構いません。押し売りは一切しませんので、お気軽にどうぞ。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final" id="contact">
+  <div class="final-in rv">
+    <h2 class="jp">まずは、無料の集客診断から。</h2>
+    <p class="jp">「今の順位はどのくらい？」「何から手をつければいい？」<br>現状を見える化するところから、一緒に始めましょう。相談は無料です。</p>
+    <div class="final-ctas">
+      <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line jp" target="_blank">🟢 LINEで無料診断</a>
+      <a href="tel:080-4282-1277" class="btn btn-amber jp">📞 電話で相談する</a>
+    </div>
+    <div class="final-contact">
+      <div>
+        <span class="lbl jp">電話（受付 8:00〜22:00 / 年中無休）</span>
+        <a href="tel:080-4282-1277">080-4282-1277</a>
+      </div>
+      <div>
+        <span class="lbl jp">メール</span>
+        <a href="mailto:totalconsulting39@gmail.com">totalconsulting39@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <a href="index.html" class="back jp">← Total Consulting トップへ戻る</a>
+  <p class="disc jp">※SEO・MEOの効果は検索エンジンやGoogleの仕様、競合状況により変動します。特定の順位や成果を保証するものではありません。施策内容・料金は業種・エリア・対策範囲により異なります。まずは無料診断にてご相談ください。</p>
+  <p class="jp">&copy; 2026 Total Consulting（業務提携: 株式会社MEEM）. All rights reserved.</p>
+</footer>
+
+<script>
+// reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// faq accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')});
+});
+</script>
+</body>
+</html>
