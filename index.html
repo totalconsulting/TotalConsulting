@@ -1196,6 +1196,89 @@ section[id]{scroll-margin-top:76px}
 .promo-card:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,0,0,.2)!important}
 @media(max-width:768px){.promo-gallery{grid-template-columns:1fr!important}}
 
+/* 新卒向け特設コーナー */
+.shinsotsu-feature{
+  padding:5rem 5%;
+  background:linear-gradient(135deg,#14532d 0%,#16a34a 60%,#22c55e 130%);
+  position:relative;overflow:hidden;
+}
+.shinsotsu-feature::before{
+  content:'';position:absolute;
+  right:-8%;top:-30%;
+  width:520px;height:520px;
+  background:radial-gradient(circle,rgba(255,255,255,.12),transparent 62%);
+  border-radius:50%;
+}
+.shinsotsu-feature::after{
+  content:'🎓';
+  position:absolute;
+  left:3%;bottom:-2rem;
+  font-size:12rem;opacity:.06;
+  pointer-events:none;
+}
+.sf-inner{
+  max-width:900px;margin:0 auto;
+  position:relative;z-index:1;
+  text-align:center;color:#fff;
+}
+.sf-badge{
+  display:inline-block;
+  background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;font-weight:700;font-size:.9rem;
+  padding:.4rem 1.3rem;border-radius:50px;
+  margin-bottom:1.5rem;
+}
+.sf-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(1.8rem,4.5vw,2.8rem);
+  font-weight:900;line-height:1.35;
+  margin-bottom:1.3rem;
+}
+.sf-lead{
+  font-size:1.02rem;
+  color:rgba(255,255,255,.92);
+  line-height:1.9;
+  max-width:680px;margin:0 auto 2rem;
+}
+.sf-points{
+  display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+  margin-bottom:2.3rem;
+}
+.sf-point{
+  display:flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.22);
+  padding:.6rem 1.3rem;border-radius:50px;
+  font-size:.92rem;font-weight:700;
+}
+.sf-point span{font-size:1.1rem}
+.sf-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.sf-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:1rem 2.2rem;border-radius:50px;
+  font-weight:800;font-size:1.02rem;
+  transition:transform .25s,box-shadow .25s,background .2s;
+}
+.sf-btn:hover{transform:translateY(-3px)}
+.sf-btn-main{
+  background:#fff;color:#14532d;
+  box-shadow:0 10px 28px rgba(0,0,0,.2);
+}
+.sf-btn-main:hover{background:#f0fff5;box-shadow:0 16px 36px rgba(0,0,0,.28)}
+.sf-btn-line{
+  background:#06c755;color:#fff;
+  border:2px solid rgba(255,255,255,.5);
+  box-shadow:0 10px 28px rgba(6,199,85,.35);
+}
+.sf-btn-line:hover{box-shadow:0 16px 36px rgba(6,199,85,.5)}
+@media(max-width:768px){
+  .shinsotsu-feature{padding:3.5rem 5%}
+  .sf-br{display:none}
+  .sf-ctas{flex-direction:column}
+  .sf-btn{width:100%}
+}
+
 /* ─────────────────────────────
    REVEAL ANIMATIONS
 ───────────────────────────── */
@@ -1265,9 +1348,9 @@ section[id]{scroll-margin-top:76px}
     <ul class="nav-items">
       <li><a href="#home" class="jp">ホーム</a></li>
       <li><a href="#services" class="jp">サービス</a></li>
+      <li><a href="#shinsotsu" class="jp">新卒採用</a></li>
       <li><a href="#portfolio" class="jp">制作実績</a></li>
       <li><a href="#cases" class="jp">成功事例</a></li>
-      <li><a href="#testimonials" class="jp">お客様の声</a></li>
       <li><a href="#about" class="jp">会社概要</a></li>
       <li><a href="https://line.me/ti/p/6g79Rp7EdP" class="nav-cta jp" target="_blank">無料相談</a></li>
     </ul>
@@ -1279,9 +1362,9 @@ section[id]{scroll-margin-top:76px}
 <nav class="mob-nav" id="mobNav">
   <a href="#home" class="jp">ホーム</a>
   <a href="#services" class="jp">サービス</a>
+  <a href="#shinsotsu" class="jp">新卒採用</a>
   <a href="#portfolio" class="jp">制作実績</a>
   <a href="#cases" class="jp">成功事例</a>
-  <a href="#testimonials" class="jp">お客様の声</a>
   <a href="#about" class="jp">会社概要</a>
   <a href="https://line.me/ti/p/6g79Rp7EdP" class="jp" target="_blank">🟢 無料相談（LINE）</a>
 </nav>
@@ -1317,6 +1400,24 @@ section[id]{scroll-margin-top:76px}
     <div class="stat-box rv"><span class="stat-n">98%</span><span class="stat-l jp">顧客満足度</span></div>
     <div class="stat-box rv"><span class="stat-n">15年</span><span class="stat-l jp">業界経験</span></div>
     <div class="stat-box rv"><span class="stat-n">100+</span><span class="stat-l jp">企業サポート実績</span></div>
+  </div>
+</section>
+
+<!-- ════ 新卒向け特設コーナー ════ -->
+<section class="shinsotsu-feature" id="shinsotsu">
+  <div class="sf-inner rv">
+    <div class="sf-badge jp">🎓 27卒・28卒の方へ</div>
+    <h2 class="sf-title jp">新卒の就活、<br class="sf-br">プロが内定まで伴走します。</h2>
+    <p class="sf-lead jp">「どの会社が合うの？」「面接が不安」——そんな悩みを、経験豊富なキャリアアドバイザーが一緒に解決。全国の優良求人（東京2,000件・福岡800件ほか）から、あなたに合う一社を見つけます。履歴書・面接対策から入社まで、すべて無料でサポートします。</p>
+    <div class="sf-points">
+      <div class="sf-point jp"><span>📋</span>書類・面接を徹底対策</div>
+      <div class="sf-point jp"><span>🎯</span>入社しやすい企業を提案</div>
+      <div class="sf-point jp"><span>🤝</span>内定まで専任で伴走</div>
+    </div>
+    <div class="sf-ctas">
+      <a href="shinsotsu.html" class="sf-btn sf-btn-main jp">新卒就活サポートを見る →</a>
+      <a href="https://line.me/ti/p/6g79Rp7EdP" class="sf-btn sf-btn-line jp" target="_blank">🟢 LINEで無料相談</a>
+    </div>
   </div>
 </section>
 
@@ -1409,9 +1510,11 @@ section[id]{scroll-margin-top:76px}
         <li>不動産賃貸仲介・不動産売買仲介</li>
         <li>人材派遣・人材紹介</li>
         <li>転職・就職仲介</li>
+        <li>新卒就活サポート（27卒・28卒）</li>
         <li>結婚相談所仲介</li>
       </ul>
       <div class="svc-btns">
+        <a href="shinsotsu.html" class="btn btn-sky btn-sm btn-full jp">🎓 新卒就活サポートの詳細</a>
         <a href="https://rakusumu.jp/228470298/" class="btn btn-sky btn-sm btn-full jp" target="_blank">🏡 不動産のお問い合わせ</a>
         <a href="https://career.rakusumu.jp/228470298/" class="btn btn-amber btn-sm btn-full jp" target="_blank">💼 転職・就職のお問い合わせ</a>
       </div>

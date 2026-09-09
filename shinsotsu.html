@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新卒就活サポート | 27卒・28卒の内定まで伴走 | Total Consulting</title>
+<meta name="description" content="27卒・28卒向けの新卒就活サポート。全国の優良求人をご紹介し、履歴書・職務経歴書の添削から面接対策、入社まで専任のキャリアアドバイザーが伴走します。相談はLINEで無料。">
+<meta property="og:title" content="新卒就活サポート | 内定まで伴走 | Total Consulting">
+<meta property="og:description" content="一人で就活しない。プロが内定まで伴走します。全国の優良求人多数。相談は無料。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14243f;
+  --navy2:#1e3357;
+  --ink:#1c2431;
+  --slate:#5b6a7f;
+  --green:#16a34a;
+  --green-d:#15803d;
+  --line:#06c755;
+  --coral:#ff6b5b;
+  --gold:#f5a623;
+  --paper:#ffffff;
+  --cream:#f6f8fb;
+  --mist:#eef3f8;
+  --border:#e3e9f0;
+  --r:16px;
+  --rl:24px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--paper);line-height:1.8;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.zk{font-family:'Zen Kaku Gothic New',sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 5%}
+section[id]{scroll-margin-top:72px}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1.05rem 2.3rem;border-radius:50px;font-weight:800;font-size:1.02rem;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-line{background:var(--line);color:#fff;box-shadow:0 10px 26px rgba(6,199,85,.32)}
+.btn-line:hover{box-shadow:0 16px 38px rgba(6,199,85,.48)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy2)}
+
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(20,36,63,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hdr-in{max-width:1120px;margin:0 auto;padding:.7rem 5%;display:flex;align-items:center;justify-content:space-between}
+.hdr-brand{color:#fff;display:flex;flex-direction:column;line-height:1.2}
+.hdr-brand .n{font-weight:900;font-size:1.05rem}
+.hdr-brand .s{font-size:.65rem;color:#8fd9a8;font-weight:600}
+.hdr-cta{background:var(--line);color:#fff;padding:.55rem 1.3rem;border-radius:50px;font-weight:700;font-size:.85rem;transition:transform .2s,box-shadow .2s}
+.hdr-cta:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(6,199,85,.45)}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:4.5rem 5% 4rem;overflow:hidden}
+.hero-deco{position:absolute;inset:0;overflow:hidden}
+.hero-deco::before{content:'';position:absolute;right:-8%;top:-15%;width:480px;height:480px;background:radial-gradient(circle,rgba(22,163,74,.22),transparent 62%);border-radius:50%}
+.hero-deco::after{content:'';position:absolute;left:-10%;bottom:-25%;width:420px;height:420px;background:radial-gradient(circle,rgba(255,107,91,.14),transparent 62%);border-radius:50%}
+.hero-in{position:relative;z-index:1;max-width:1120px;margin:0 auto}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.4rem 1.2rem;border-radius:50px;font-size:.85rem;font-weight:700;margin-bottom:1.6rem}
+.hero-tag b{color:#8fd9a8}
+.hero h1{font-size:clamp(2.1rem,5.6vw,3.5rem);font-weight:900;line-height:1.3;margin-bottom:1.4rem;letter-spacing:-.01em}
+.hero h1 .mark{background:linear-gradient(transparent 60%,rgba(22,163,74,.45) 60%)}
+.hero-sub{font-size:clamp(1rem,2.3vw,1.18rem);color:rgba(255,255,255,.85);max-width:600px;margin-bottom:2.4rem;line-height:1.9}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.8rem}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid rgba(255,255,255,.14)}
+.hstat .num{font-size:2.1rem;font-weight:900;color:#8fd9a8;line-height:1}
+.hstat .lbl{font-size:.85rem;color:rgba(255,255,255,.7);margin-top:.35rem}
+
+/* SECTION */
+.sec{padding:5rem 5%}
+.sec-in{max-width:1120px;margin:0 auto}
+.sec-head{text-align:center;margin-bottom:3rem}
+.sec-kicker{display:inline-block;color:var(--green);font-weight:800;font-size:.85rem;margin-bottom:.8rem;padding:.3rem 1.1rem;background:rgba(22,163,74,.1);border-radius:50px}
+.sec-title{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:900;line-height:1.35}
+.sec-title.light{color:#fff}
+.sec-lead{color:var(--slate);margin-top:1rem;font-size:1.05rem;max-width:620px;margin-left:auto;margin-right:auto}
+.sec-lead.light{color:rgba(255,255,255,.75)}
+
+/* WORRIES */
+.worry{background:var(--cream)}
+.worry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:2.5rem}
+.worry-card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:2rem 1.7rem}
+.worry-card .face{font-size:2rem;margin-bottom:.7rem}
+.worry-card p{font-size:1rem;color:var(--ink);font-weight:500;line-height:1.7}
+.worry-card p .q{color:var(--coral);font-weight:800}
+.worry-bridge{text-align:center;font-size:clamp(1.15rem,2.6vw,1.5rem);font-weight:900;color:var(--navy);line-height:1.6}
+.worry-bridge .hl{color:var(--green)}
+
+/* SUPPORT (main selling point) */
+.support{background:var(--paper)}
+.support-hero{background:linear-gradient(150deg,var(--navy),var(--navy2));border-radius:var(--rl);padding:3rem 2.6rem;color:#fff;margin-bottom:2.5rem;position:relative;overflow:hidden}
+.support-hero::after{content:'';position:absolute;right:-5%;top:-30%;width:320px;height:320px;background:radial-gradient(circle,rgba(22,163,74,.2),transparent 62%);border-radius:50%}
+.support-hero-in{position:relative;z-index:1;max-width:640px}
+.support-hero h3{font-size:clamp(1.4rem,3.2vw,2rem);font-weight:900;line-height:1.45;margin-bottom:1rem}
+.support-hero h3 .u{background:linear-gradient(transparent 60%,rgba(22,163,74,.5) 60%)}
+.support-hero p{color:rgba(255,255,255,.82);font-size:1rem}
+.support-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.sstep{background:var(--cream);border:1px solid var(--border);border-radius:var(--r);padding:1.7rem 1.4rem;position:relative}
+.sstep .step-n{position:absolute;top:1.2rem;right:1.3rem;font-size:.8rem;font-weight:800;color:var(--green);background:rgba(22,163,74,.12);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.sstep .ico{font-size:1.8rem;margin-bottom:.7rem}
+.sstep h4{font-size:1.05rem;font-weight:800;margin-bottom:.5rem;line-height:1.45}
+.sstep p{font-size:.88rem;color:var(--slate);line-height:1.7}
+.support-note{margin-top:2rem;background:rgba(22,163,74,.07);border:1px solid rgba(22,163,74,.2);border-radius:var(--r);padding:1.4rem 1.6rem;font-size:.95rem;color:var(--ink);display:flex;gap:.8rem;align-items:flex-start}
+.support-note .badge{background:var(--green);color:#fff;font-size:.72rem;font-weight:800;padding:.3rem .8rem;border-radius:50px;white-space:nowrap;flex-shrink:0}
+
+/* JOBS */
+.jobs{background:var(--cream)}
+.jobs-area{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.8rem}
+.area-chip{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1rem 1.6rem;text-align:center;min-width:150px}
+.area-chip .city{font-size:.9rem;color:var(--slate);font-weight:700;margin-bottom:.2rem}
+.area-chip .cnt{font-size:1.6rem;font-weight:900;color:var(--navy)}
+.area-chip .cnt small{font-size:.85rem;color:var(--slate)}
+.area-chip.more{display:flex;flex-direction:column;justify-content:center;background:var(--navy);border-color:var(--navy)}
+.area-chip.more .city,.area-chip.more .cnt{color:#fff}
+.jobs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.job-card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:1.9rem;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s}
+.job-card:hover{border-color:rgba(22,163,74,.4);box-shadow:0 14px 40px rgba(20,36,63,.1)}
+.job-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+.job-cat{font-size:1.2rem;font-weight:900;color:var(--navy);line-height:1.4}
+.job-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.job-tag{font-size:.75rem;font-weight:700;padding:.25rem .8rem;border-radius:50px}
+.job-tag.g{background:rgba(22,163,74,.12);color:var(--green-d)}
+.job-tag.n{background:rgba(20,36,63,.08);color:var(--navy)}
+.job-tag.c{background:rgba(255,107,91,.12);color:#d84a3a}
+.job-desc{font-size:.93rem;color:var(--slate);line-height:1.75;margin-bottom:1.3rem;flex:1}
+.job-meta{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+.job-meta div{font-size:.85rem}
+.job-meta .k{color:var(--slate);font-size:.75rem;display:block}
+.job-meta .v{font-weight:800;color:var(--ink)}
+.jobs-foot{text-align:center;margin-top:2.5rem;font-size:.95rem;color:var(--slate)}
+
+/* WHY US */
+.why{background:var(--paper)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.why-card{padding:1.9rem 1.6rem;border-radius:var(--rl);background:var(--cream);border:1px solid var(--border)}
+.why-card .ico{width:48px;height:48px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
+.why-card h4{font-size:1.1rem;font-weight:800;margin-bottom:.5rem}
+.why-card p{font-size:.9rem;color:var(--slate);line-height:1.75}
+
+/* FLOW */
+.flow{background:var(--navy);color:#fff}
+.flow-line{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.flow-item{display:flex;gap:1.4rem;padding:1.4rem 0;position:relative}
+.flow-item:not(:last-child)::before{content:'';position:absolute;left:22px;top:56px;bottom:-14px;width:2px;background:rgba(143,217,168,.3)}
+.flow-dot{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0;z-index:1}
+.flow-body h4{font-size:1.15rem;font-weight:800;margin-bottom:.3rem}
+.flow-body p{font-size:.92rem;color:rgba(255,255,255,.72);line-height:1.7}
+
+/* FAQ */
+.faq{background:var(--cream)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);margin-bottom:1rem;overflow:hidden}
+.faq-q{padding:1.3rem 1.6rem;font-weight:700;font-size:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .2s}
+.faq-q:hover{background:#f8fafc}
+.faq-q .mk{color:var(--green);font-size:1.5rem;transition:transform .3s;flex-shrink:0;line-height:1}
+.faq-item.open .faq-q .mk{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--slate);font-size:.93rem}
+.faq-item.open .faq-a{max-height:320px}
+.faq-a-in{padding:0 1.6rem 1.4rem;line-height:1.8}
+
+/* FINAL */
+.final{background:linear-gradient(150deg,var(--green-d),var(--green));color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;left:-8%;top:-40%;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,.15),transparent 62%);border-radius:50%}
+.final-in{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.final h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:900;margin-bottom:1rem;line-height:1.4}
+.final p{color:rgba(255,255,255,.9);font-size:1.05rem;margin-bottom:2.2rem}
+.final .btn-line{background:#fff;color:var(--green-d);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.final .btn-line:hover{background:#f0fff5}
+.final-note{margin-top:1.6rem;font-size:.85rem;color:rgba(255,255,255,.8)}
+
+/* FOOTER */
+.foot{background:var(--navy);color:rgba(255,255,255,.6);padding:3rem 5% 2rem;text-align:center}
+.foot-links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.6rem}
+.foot-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:600;transition:color .2s}
+.foot-links a:hover{color:#8fd9a8}
+.foot-back{display:inline-block;margin-bottom:1.6rem;color:#fff;font-weight:700;border:1px solid rgba(255,255,255,.25);padding:.6rem 1.6rem;border-radius:50px;transition:all .2s}
+.foot-back:hover{background:rgba(255,255,255,.1)}
+.foot .disc{max-width:820px;margin:0 auto 1rem;font-size:.76rem;line-height:1.7;color:rgba(255,255,255,.45)}
+
+/* sticky mobile CTA */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#fff;border-top:1px solid var(--border);padding:.7rem 5%;display:none;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
+.sticky-cta a{width:100%}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.show{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .worry-grid{grid-template-columns:1fr}
+  .support-steps{grid-template-columns:1fr 1fr}
+  .jobs-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .hero-ctas{flex-direction:column}
+  .btn{width:100%}
+  .support-steps{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem}
+  .sec{padding:3.5rem 5%}
+  .support-hero{padding:2.2rem 1.6rem}
+  .sticky-cta{display:block}
+  body{padding-bottom:70px}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html" class="hdr-brand">
+      <span class="n zk">新卒就活サポート</span>
+      <span class="s">by Total Consulting</span>
+    </a>
+    <a href="https://line.me/ti/p/6g79Rp7EdP" class="hdr-cta" target="_blank">LINEで相談</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-deco"></div>
+  <div class="hero-in">
+    <span class="hero-tag zk">🎓 <b>27卒・28卒</b> 対象／就活サポート</span>
+    <h1 class="zk">一人で就活しない。<br><span class="mark">内定まで、プロが隣で伴走。</span></h1>
+    <p class="hero-sub">「どの会社が合うの？」「面接が不安」——そんな悩みを、経験豊富なキャリアアドバイザーが一緒に解決します。全国の優良求人から、あなたに合う一社を見つけましょう。相談はLINEで無料です。</p>
+    <div class="hero-ctas">
+      <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line" target="_blank">🟢 LINEで無料相談をはじめる</a>
+      <a href="#jobs" class="btn btn-ghost">求人を見てみる</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="num">2,000<small style="font-size:1rem">件</small></div><div class="lbl">東京エリアの求人</div></div>
+      <div class="hstat"><div class="num">800<small style="font-size:1rem">件</small></div><div class="lbl">福岡エリアの求人</div></div>
+      <div class="hstat"><div class="num">全国</div><div class="lbl">エリア対応</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORRIES -->
+<section class="sec worry">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="sec-kicker zk">SUCH WORRIES</span>
+      <h2 class="sec-title zk">就活、こんな不安ありませんか？</h2>
+    </div>
+    <div class="worry-grid">
+      <div class="worry-card rv">
+        <div class="face">😟</div>
+        <p>自分に<span class="q">どんな仕事が合う</span>のか、正直わからない…</p>
+      </div>
+      <div class="worry-card rv">
+        <div class="face">📝</div>
+        <p>履歴書や<span class="q">エントリーシート</span>の書き方に自信がない…</p>
+      </div>
+      <div class="worry-card rv">
+        <div class="face">😰</div>
+        <p><span class="q">面接が苦手</span>。何を話せばいいのかわからない…</p>
+      </div>
+    </div>
+    <p class="worry-bridge zk rv">その不安、<span class="hl">全部ひとつずつ</span>、一緒に解決していきます。</p>
+  </div>
+</section>
+
+<!-- SUPPORT: main selling point -->
+<section class="sec support" id="support">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="sec-kicker zk">FULL SUPPORT</span>
+      <h2 class="sec-title zk">内定まで、専任アドバイザーが伴走します</h2>
+      <p class="sec-lead">求人を紹介して終わり、ではありません。あなたの強みの整理から、書類、面接、そして入社まで。就活のプロが最後まで一緒に走ります。</p>
+    </div>
+
+    <div class="support-hero rv">
+      <div class="support-hero-in">
+        <h3 class="zk">数多くの就活生を見てきたアドバイザーが、<br><span class="u">あなたの「受かる就活」</span>を設計します。</h3>
+        <p>これまでの経験から、「どう見せれば伝わるか」「どんな人がどの企業に合うか」を熟知。あなたに寄り添いながら、内定への最短ルートをご提案します。</p>
+      </div>
+    </div>
+
+    <div class="support-steps">
+      <div class="sstep rv">
+        <span class="step-n">1</span>
+        <div class="ico">🔍</div>
+        <h4 class="zk">強み・適性の整理</h4>
+        <p>自分では気づかない強みを引き出し、どんな仕事・企業が合うのかを一緒に見つけます。</p>
+      </div>
+      <div class="sstep rv">
+        <span class="step-n">2</span>
+        <div class="ico">📝</div>
+        <h4 class="zk">書類の添削</h4>
+        <p>履歴書・職務経歴書・ESを、通過率が上がるよう一枚ずつ丁寧に添削・アドバイスします。</p>
+      </div>
+      <div class="sstep rv">
+        <span class="step-n">3</span>
+        <div class="ico">🗣️</div>
+        <h4 class="zk">面接対策</h4>
+        <p>想定質問への答え方から立ち居振る舞いまで、模擬面接で本番に自信を持って臨めるように。</p>
+      </div>
+      <div class="sstep rv">
+        <span class="step-n">4</span>
+        <div class="ico">🎯</div>
+        <h4 class="zk">入社しやすい企業提案</h4>
+        <p>あなたの適性に合い、内定が出やすい企業情報をご提案。ミスマッチのない入社まで伴走します。</p>
+      </div>
+    </div>
+
+    <div class="support-note rv">
+      <span class="badge zk">ここが安心</span>
+      <div>書類の添削も、面接対策も、企業のご提案も、すべて<b>無料</b>。就活のプロが専任でつくので、「一人で抱え込まない就活」ができます。押し売りは一切ありません。</div>
+    </div>
+  </div>
+</section>
+
+<!-- JOBS -->
+<section class="sec jobs" id="jobs">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="sec-kicker zk">JOBS</span>
+      <h2 class="sec-title zk">ご紹介できる求人の一例</h2>
+      <p class="sec-lead">大手からメガベンチャーまで、全国に幅広い求人があります。ここで紹介するのはほんの一部。あなたの希望に合わせてご案内します。</p>
+    </div>
+
+    <div class="jobs-area rv">
+      <div class="area-chip"><div class="city">東京エリア</div><div class="cnt">2,000<small>件</small></div></div>
+      <div class="area-chip"><div class="city">福岡エリア</div><div class="cnt">800<small>件</small></div></div>
+      <div class="area-chip more"><div class="city">その他</div><div class="cnt">全国対応</div></div>
+    </div>
+
+    <div class="jobs-grid">
+      <!-- 求人1 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">大手通信会社<br>販売クルー</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">未経験OK</span>
+          <span class="job-tag n">正社員登用制度あり</span>
+          <span class="job-tag c">平均残業10h以内</span>
+        </div>
+        <p class="job-desc">誰もが知る大手通信キャリアのショップで、スマホやサービスのご案内・販売を担当。研修が充実しているので未経験でも安心。最短1年で正社員登用の実績も。</p>
+        <div class="job-meta">
+          <div><span class="k">想定年収</span><span class="v">296〜365万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">全国（希望考慮）</span></div>
+        </div>
+      </div>
+
+      <!-- 求人2 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">大手警備会社<br>施工管理職</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">文系歓迎</span>
+          <span class="job-tag n">東証プライム上場</span>
+          <span class="job-tag c">年間休日120日</span>
+        </div>
+        <p class="job-desc">業界トップシェアの大手で、最新セキュリティシステム設置の施工管理を担当。住宅手当やキャリア支援制度など福利厚生が充実。女性も活躍中の安定企業です。</p>
+        <div class="job-meta">
+          <div><span class="k">想定年収</span><span class="v">360〜375万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">全国（希望考慮）</span></div>
+        </div>
+      </div>
+
+      <!-- 求人3 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">急成長メガベンチャー<br>総合職</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">若手裁量大</span>
+          <span class="job-tag n">IT×人材</span>
+          <span class="job-tag c">キャリアパス豊富</span>
+        </div>
+        <p class="job-desc">人材・ITなど複数の急成長事業を展開するメガベンチャー。若手のうちから大きな裁量を持ち、営業・企画・マーケなど幅広いキャリアを築けます。成長したい人に。</p>
+        <div class="job-meta">
+          <div><span class="k">特徴</span><span class="v">急成長・裁量大</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京ほか</span></div>
+        </div>
+      </div>
+
+      <!-- 求人4 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">業界トップM&A企業<br>M&Aアドバイザー</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">高年収</span>
+          <span class="job-tag n">年収ランキング上位</span>
+          <span class="job-tag c">インセンティブ有</span>
+        </div>
+        <p class="job-desc">中小企業の事業承継を支える、最高峰のM&Aアドバイザー職。一気通貫で案件を担当でき、若手でも高い専門性が身につきます。実力次第で高年収を狙える環境。</p>
+        <div class="job-meta">
+          <div><span class="k">初年度年収</span><span class="v">約652万円〜</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京</span></div>
+        </div>
+      </div>
+
+      <!-- 求人5 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">社会インフラIT×HR企業<br>営業・企画・マーケ</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">年休124日</span>
+          <span class="job-tag n">成長環境</span>
+          <span class="job-tag c">未経験歓迎</span>
+        </div>
+        <p class="job-desc">物流など社会インフラを、ITとHRの両面から支える成長企業。営業・企画・マーケに挑戦できます。年間休日124日・年収400万〜と、働きやすさも両立。</p>
+        <div class="job-meta">
+          <div><span class="k">想定年収</span><span class="v">400万円〜</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京ほか</span></div>
+        </div>
+      </div>
+
+      <!-- 求人6 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">急成長IT×人材×医療ベンチャー<br>総合職</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">若手最速活躍</span>
+          <span class="job-tag n">適性配属</span>
+          <span class="job-tag c">人物重視採用</span>
+        </div>
+        <p class="job-desc">IT・人材・医療マーケなど幅広い事業を展開。営業・Webマーケ・ITコンサル・企画など、適性に合わせて配属。圧倒的な成長環境で市場価値を高めたい人へ。</p>
+        <div class="job-meta">
+          <div><span class="k">特徴</span><span class="v">急成長・成果主義</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京ほか</span></div>
+        </div>
+      </div>
+
+      <!-- 求人7 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">東証プライム上場グループ<br>コンサルタント職</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">未経験歓迎</span>
+          <span class="job-tag n">東証プライム上場G</span>
+          <span class="job-tag c">戦略〜IT・DX</span>
+        </div>
+        <p class="job-desc">戦略からIT・DXまで手がける総合コンサルティングファーム。若手でも大きな裁量を持ち、幅広い業界のクライアントを支援。コンサルタントとして市場価値を高められます。</p>
+        <div class="job-meta">
+          <div><span class="k">想定年収</span><span class="v">500〜800万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京</span></div>
+        </div>
+      </div>
+
+      <!-- 求人8 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">ITコンサルティング企業<br>コンサルティング職</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">初任給30万円</span>
+          <span class="job-tag n">虎ノ門ヒルズ勤務</span>
+          <span class="job-tag c">土日祝休・年休123日</span>
+        </div>
+        <p class="job-desc">DX・IT導入を支援するコンサルティング職。研修が充実しているので未経験でも安心。初任給30万円、虎ノ門ヒルズ勤務、土日祝休みと待遇・環境が整っています。</p>
+        <div class="job-meta">
+          <div><span class="k">初任給</span><span class="v">月30万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京（虎ノ門）</span></div>
+        </div>
+      </div>
+
+      <!-- 求人9 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">国内最大級IT転職メディア運営<br>キャリアアドバイザー</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">初年棒525万円</span>
+          <span class="job-tag n">働きがい認定企業</span>
+          <span class="job-tag c">大手商社G業務提携</span>
+        </div>
+        <p class="job-desc">国内最大級のIT転職メディアを運営する急成長HRTech企業。エンジニアのキャリア支援を通じて、人と企業をつなぐ仕事。成長率トップクラスの環境で市場価値を高められます。</p>
+        <div class="job-meta">
+          <div><span class="k">初年棒</span><span class="v">525万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京</span></div>
+        </div>
+      </div>
+
+      <!-- 求人10 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">自社開発マンションのデベロッパー<br>提案営業</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">未経験歓迎</span>
+          <span class="job-tag n">高インセンティブ</span>
+          <span class="job-tag c">1件ごとに報酬</span>
+        </div>
+        <p class="job-desc">自社開発の高スペックマンションを提案する営業職。1件成約ごとにインセンティブがつく実力主義。頑張りがそのまま収入に反映される、成長意欲の高い人向けの環境です。</p>
+        <div class="job-meta">
+          <div><span class="k">想定年収</span><span class="v">360〜2,000万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">東京</span></div>
+        </div>
+      </div>
+
+      <!-- 求人11 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">IT×マーケティング支援企業<br>総合職（営業）</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">未経験歓迎</span>
+          <span class="job-tag n">IT×マーケ</span>
+          <span class="job-tag c">インセンティブ有</span>
+        </div>
+        <p class="job-desc">Webマーケティングやコンサルティングで、企業の成長を支える営業職。IT×マーケティングのスキルが身につき、幅広い業界の課題解決に携われます。成果が評価される環境。</p>
+        <div class="job-meta">
+          <div><span class="k">初任給</span><span class="v">月25万円〜</span></div>
+          <div><span class="k">勤務地</span><span class="v">全国（希望考慮）</span></div>
+        </div>
+      </div>
+
+      <!-- 求人12 -->
+      <div class="job-card rv">
+        <div class="job-top"><div class="job-cat zk">スタンダード市場上場企業<br>機械設計エンジニア</div></div>
+        <div class="job-tags">
+          <span class="job-tag g">書類選考なし</span>
+          <span class="job-tag n">新卒・育成枠</span>
+          <span class="job-tag c">年休123日</span>
+        </div>
+        <p class="job-desc">機械設計エンジニアとして育成枠で採用。書類選考なしで応募でき、未経験からじっくり設計スキルを習得できます。「生涯技術者」として長く働ける安定環境です。</p>
+        <div class="job-meta">
+          <div><span class="k">想定年収</span><span class="v">250〜350万円</span></div>
+          <div><span class="k">勤務地</span><span class="v">全国（希望考慮）</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="jobs-foot rv">ここに載っているのは一例です。「こんな業界がいい」「地元で働きたい」など、まずはLINEで希望を聞かせてください。</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec why">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="sec-kicker zk">WHY US</span>
+      <h2 class="sec-title zk">選ばれる理由</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <div class="ico">🤝</div>
+        <h4 class="zk">内定まで専任で伴走</h4>
+        <p>担当が途中で変わることなく、最初から最後まで同じアドバイザーが一貫してサポートします。</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ico">📋</div>
+        <h4 class="zk">書類・面接を徹底対策</h4>
+        <p>これまでの経験を活かし、通過率が上がる書類の書き方・面接での伝え方を具体的にアドバイス。</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ico">🎯</div>
+        <h4 class="zk">合う企業だけを提案</h4>
+        <p>数だけ勧める就活ではなく、あなたの適性に合い、入社後も活躍できる企業を厳選してご提案します。</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ico">🌏</div>
+        <h4 class="zk">全国の求人に対応</h4>
+        <p>東京・福岡をはじめ全国に求人多数。都市部で挑戦したい人も、地元で働きたい人にも対応します。</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ico">💬</div>
+        <h4 class="zk">LINEで気軽に相談</h4>
+        <p>堅苦しい面談は不要。使い慣れたLINEで、すきま時間に何でも相談できます。</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ico">🎓</div>
+        <h4 class="zk">インターンの機会も</h4>
+        <p>内定後には、長期・短期インターンを開催する可能性も。入社前に仕事を体験できるチャンスがあります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="sec flow">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="sec-kicker zk" style="background:rgba(143,217,168,.15);color:#8fd9a8">FLOW</span>
+      <h2 class="sec-title light zk">相談から内定までの流れ</h2>
+      <p class="sec-lead light">むずかしいことはありません。まずはLINEで話すところから。</p>
+    </div>
+    <div class="flow-line">
+      <div class="flow-item rv">
+        <div class="flow-dot">1</div>
+        <div class="flow-body">
+          <h4 class="zk">LINEで友だち追加・相談</h4>
+          <p>まずは気軽にLINEで友だち追加。今の状況や希望を聞かせてください。相談は無料です。</p>
+        </div>
+      </div>
+      <div class="flow-item rv">
+        <div class="flow-dot">2</div>
+        <div class="flow-body">
+          <h4 class="zk">キャリア面談・適性の整理</h4>
+          <p>アドバイザーがあなたの強みや希望を一緒に整理し、方向性を明確にします。</p>
+        </div>
+      </div>
+      <div class="flow-item rv">
+        <div class="flow-dot">3</div>
+        <div class="flow-body">
+          <h4 class="zk">求人紹介・書類添削</h4>
+          <p>合う求人をご紹介。エントリー書類も一緒に仕上げて、通過率を高めます。</p>
+        </div>
+      </div>
+      <div class="flow-item rv">
+        <div class="flow-dot">4</div>
+        <div class="flow-body">
+          <h4 class="zk">面接対策・選考サポート</h4>
+          <p>模擬面接で本番に備えます。選考の日程調整などもサポートするので安心です。</p>
+        </div>
+      </div>
+      <div class="flow-item rv">
+        <div class="flow-dot">5</div>
+        <div class="flow-body">
+          <h4 class="zk">内定・入社まで伴走</h4>
+          <p>内定後の意思決定や入社準備まで、しっかり伴走。安心して社会人のスタートを切れます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="sec-in">
+    <div class="sec-head rv">
+      <span class="sec-kicker zk">FAQ</span>
+      <h2 class="sec-title zk">よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item rv">
+        <div class="faq-q">本当に無料で使えますか？ <span class="mk">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in">はい、就活生の方は相談から内定まで、すべて無料でご利用いただけます。書類添削や面接対策も費用はかかりません。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q">27卒・28卒どちらも対象ですか？ <span class="mk">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in">どちらも対象です。早めに動くほど選択肢が広がり、じっくり準備できます。学年に合わせたサポートをご用意しています。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q">まだ志望業界が決まっていません… <span class="mk">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in">むしろ、そこから一緒に考えるのが私たちの役目です。適性や希望を整理しながら、あなたに合う業界・企業を見つけていきましょう。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q">地方在住でも相談できますか？ <span class="mk">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in">はい。LINEでのやり取りが中心なので、どこにお住まいでも大丈夫です。全国の求人に対応しています。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q">インターンには参加できますか？ <span class="mk">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in">内定後に、長期・短期のインターンを開催する可能性があります。入社前に仕事を体験したい方はご相談ください。</div></div>
+      </div>
+      <div class="faq-item rv">
+        <div class="faq-q">相談したら必ず応募しないといけませんか？ <span class="mk">＋</span></div>
+        <div class="faq-a"><div class="faq-a-in">いいえ。相談だけでも大歓迎です。無理に応募を勧めることはありません。まずは気軽に話してみてください。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final" id="contact">
+  <div class="final-in rv">
+    <h2 class="zk">就活の第一歩は、<br>LINEで話すことから。</h2>
+    <p>「何から始めればいい？」——その質問こそ、最高のスタートです。<br>あなたのペースで、一緒に進めていきましょう。</p>
+    <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line" target="_blank">🟢 LINEで無料相談をはじめる</a>
+    <p class="final-note">友だち追加だけでもOK ／ 相談は何度でも無料</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <a href="index.html" class="foot-back zk">← Total Consulting トップへ戻る</a>
+  <div class="foot-links">
+    <a href="index.html">会社情報</a>
+    <a href="#support">サポート内容</a>
+    <a href="#jobs">求人を見る</a>
+    <a href="https://line.me/ti/p/6g79Rp7EdP" target="_blank">LINEで相談</a>
+  </div>
+  <p class="disc">※掲載の求人情報・年収・休日等は、提携する求人媒体・企業の情報をもとにした一例であり、募集状況により変動します。実際の応募条件は選考時に各企業の最新情報をご確認ください。社名は一部伏せて記載しています。就職・転職支援は、提携先の有料職業紹介事業者を通じて提供される場合があります。</p>
+  <p>&copy; 2026 Total Consulting（業務提携: 株式会社MEEM）. All rights reserved.</p>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta">
+  <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line" target="_blank">🟢 LINEで無料相談する</a>
+</div>
+
+<script>
+// reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>q.parentElement.classList.toggle('open'))});
+</script>
+</body>
+</html>
