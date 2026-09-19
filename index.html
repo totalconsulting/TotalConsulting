@@ -1279,6 +1279,86 @@ section[id]{scroll-margin-top:76px}
   .sf-btn{width:100%}
 }
 
+/* 戸建賃貸 特設コーナー */
+.bukken-feature{
+  padding:5rem 5%;
+  background:linear-gradient(135deg,#3d2e22 0%,#5c4636 100%);
+  position:relative;overflow:hidden;
+}
+.bukken-feature::before{
+  content:'';position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 50% 60% at 85% 20%,rgba(201,169,97,.16),transparent 60%);
+  pointer-events:none;
+}
+.bf-inner{
+  max-width:1240px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1.05fr;
+  gap:3rem;align-items:center;
+  position:relative;z-index:1;
+}
+.bf-img{
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  border:5px solid rgba(255,255,255,.9);
+  max-height:520px;
+}
+.bf-img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.bf-text{color:#fff}
+.bf-badge{
+  display:inline-block;
+  background:rgba(201,169,97,.25);
+  border:1px solid rgba(201,169,97,.5);
+  color:#e6d3a3;font-weight:700;font-size:.85rem;
+  padding:.4rem 1.2rem;border-radius:50px;
+  margin-bottom:1.3rem;
+}
+.bf-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(1.5rem,3.4vw,2.3rem);
+  font-weight:900;line-height:1.45;
+  margin-bottom:1.2rem;
+}
+.bf-lead{
+  font-size:1rem;color:rgba(255,255,255,.85);
+  line-height:1.9;margin-bottom:1.6rem;
+}
+.bf-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
+.bf-tag{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-size:.85rem;font-weight:700;
+  padding:.4rem 1rem;border-radius:50px;
+}
+.bf-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.bf-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:1rem 2rem;border-radius:50px;
+  font-weight:800;font-size:1rem;
+  transition:transform .25s,box-shadow .25s,background .2s;
+}
+.bf-btn:hover{transform:translateY(-3px)}
+.bf-btn-main{
+  background:linear-gradient(135deg,#c9a961,#a8842c);color:#fff;
+  box-shadow:0 10px 28px rgba(168,132,44,.4);
+}
+.bf-btn-main:hover{box-shadow:0 16px 36px rgba(168,132,44,.55)}
+.bf-btn-line{
+  background:#06c755;color:#fff;
+  border:2px solid rgba(255,255,255,.4);
+  box-shadow:0 10px 28px rgba(6,199,85,.3);
+}
+.bf-btn-line:hover{box-shadow:0 16px 36px rgba(6,199,85,.5)}
+@media(max-width:900px){
+  .bf-inner{grid-template-columns:1fr;gap:2rem}
+  .bf-img{max-height:340px}
+}
+@media(max-width:768px){
+  .bukken-feature{padding:3.5rem 5%}
+  .bf-ctas{flex-direction:column}
+  .bf-btn{width:100%}
+}
+
 /* ─────────────────────────────
    REVEAL ANIMATIONS
 ───────────────────────────── */
@@ -1349,8 +1429,8 @@ section[id]{scroll-margin-top:76px}
       <li><a href="#home" class="jp">ホーム</a></li>
       <li><a href="#services" class="jp">サービス</a></li>
       <li><a href="#shinsotsu" class="jp">新卒採用</a></li>
+      <li><a href="#bukken" class="jp">賃貸物件</a></li>
       <li><a href="#portfolio" class="jp">制作実績</a></li>
-      <li><a href="#cases" class="jp">成功事例</a></li>
       <li><a href="#about" class="jp">会社概要</a></li>
       <li><a href="https://line.me/ti/p/6g79Rp7EdP" class="nav-cta jp" target="_blank">無料相談</a></li>
     </ul>
@@ -1363,8 +1443,8 @@ section[id]{scroll-margin-top:76px}
   <a href="#home" class="jp">ホーム</a>
   <a href="#services" class="jp">サービス</a>
   <a href="#shinsotsu" class="jp">新卒採用</a>
+  <a href="#bukken" class="jp">賃貸物件</a>
   <a href="#portfolio" class="jp">制作実績</a>
-  <a href="#cases" class="jp">成功事例</a>
   <a href="#about" class="jp">会社概要</a>
   <a href="https://line.me/ti/p/6g79Rp7EdP" class="jp" target="_blank">🟢 無料相談（LINE）</a>
 </nav>
@@ -1417,6 +1497,30 @@ section[id]{scroll-margin-top:76px}
     <div class="sf-ctas">
       <a href="shinsotsu.html" class="sf-btn sf-btn-main jp">新卒就活サポートを見る →</a>
       <a href="https://line.me/ti/p/6g79Rp7EdP" class="sf-btn sf-btn-line jp" target="_blank">🟢 LINEで無料相談</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 戸建賃貸 特設コーナー ════ -->
+<section class="bukken-feature" id="bukken">
+  <div class="bf-inner">
+    <div class="bf-img rv">
+      <img src="bukken_numeryo.png" alt="北九州市小倉南区沼緑町 戸建賃貸4DK">
+    </div>
+    <div class="bf-text rv">
+      <div class="bf-badge jp">🏡 入居者募集中・戸建賃貸</div>
+      <h2 class="bf-title jp">家具家電付で、すぐ住める。<br>初期費用も、驚くほど安い戸建賃貸。</h2>
+      <p class="bf-lead jp">北九州市小倉南区沼緑町の4DK戸建。保証会社不要・大家直接契約で初期費用を大幅カット、入居審査は99%通過。ペット可・駐車場2台・ウッドデッキ付で、ファミリーにもルームシェア・社員寮にも。</p>
+      <div class="bf-tags">
+        <span class="bf-tag jp">賃料 85,000円</span>
+        <span class="bf-tag jp">4DK / 73.25㎡</span>
+        <span class="bf-tag jp">🐾 ペット可</span>
+        <span class="bf-tag jp">🚗 駐車場2台</span>
+      </div>
+      <div class="bf-ctas">
+        <a href="bukken-numeryo.html" class="bf-btn bf-btn-main jp">物件の詳細を見る →</a>
+        <a href="https://line.me/ti/p/6g79Rp7EdP" class="bf-btn bf-btn-line jp" target="_blank">🟢 LINEで問い合わせ</a>
+      </div>
     </div>
   </div>
 </section>
