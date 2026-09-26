@@ -25,6 +25,8 @@ Total Consultingは福岡県北九州市小倉北区を拠点に、暮らしと�
 - SEO・MEO対策サービス: https://totalconsulting.github.io/TotalConsulting/seo-meo.html
 - 新卒就活サポート（27卒・28卒）: https://totalconsulting.github.io/TotalConsulting/shinsotsu.html
 - 戸建賃貸（沼緑町・ペット可）: https://totalconsulting.github.io/TotalConsulting/bukken-numeryo.html
+- 北九州のホームページ制作: https://totalconsulting.github.io/TotalConsulting/web.html
+- 北九州の名刺・チラシ・メニュー制作: https://totalconsulting.github.io/TotalConsulting/design.html
 
 ## 問い合わせ
 - LINE: https://line.me/ti/p/6g79Rp7EdP
