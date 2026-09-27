@@ -1406,6 +1406,96 @@ section[id]{scroll-margin-top:76px}
   .bf-btn{width:100%}
 }
 
+/* 北九州の賃貸物件一覧 特設コーナー */
+.chintai-feature{
+  padding:5rem 5%;
+  background:linear-gradient(135deg,#0f766e 0%,#0d9488 60%,#14b8a6 130%);
+  position:relative;overflow:hidden;
+}
+.chintai-feature::before{
+  content:'';position:absolute;
+  right:-8%;top:-30%;
+  width:520px;height:520px;
+  background:radial-gradient(circle,rgba(255,255,255,.12),transparent 62%);
+  border-radius:50%;
+}
+.chintai-feature::after{
+  content:'🏠';
+  position:absolute;
+  left:3%;bottom:-2.5rem;
+  font-size:12rem;opacity:.06;
+  pointer-events:none;
+}
+.cf-inner{
+  max-width:900px;margin:0 auto;
+  position:relative;z-index:1;
+  text-align:center;color:#fff;
+}
+.cf-badge{
+  display:inline-block;
+  background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;font-weight:700;font-size:.9rem;
+  padding:.4rem 1.3rem;border-radius:50px;
+  margin-bottom:1.5rem;
+}
+.cf-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(1.6rem,4.2vw,2.6rem);
+  font-weight:900;line-height:1.4;
+  margin-bottom:1.3rem;
+}
+.cf-lead{
+  font-size:1.02rem;
+  color:rgba(255,255,255,.92);
+  line-height:1.9;
+  max-width:700px;margin:0 auto 2rem;
+}
+.cf-areas{
+  display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;
+  margin-bottom:1.3rem;
+}
+.cf-area{
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  padding:.6rem 1.5rem;border-radius:12px;
+  font-weight:700;font-size:.95rem;
+}
+.cf-tags{
+  display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;
+  margin-bottom:2.3rem;
+}
+.cf-tag{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  padding:.4rem 1.1rem;border-radius:50px;
+  font-size:.88rem;font-weight:700;
+}
+.cf-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cf-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:1rem 2.2rem;border-radius:50px;
+  font-weight:800;font-size:1.02rem;
+  transition:transform .25s,box-shadow .25s,background .2s;
+}
+.cf-btn:hover{transform:translateY(-3px)}
+.cf-btn-main{
+  background:#fff;color:#0f766e;
+  box-shadow:0 10px 28px rgba(0,0,0,.2);
+}
+.cf-btn-main:hover{background:#f0fdfa;box-shadow:0 16px 36px rgba(0,0,0,.28)}
+.cf-btn-line{
+  background:#06c755;color:#fff;
+  border:2px solid rgba(255,255,255,.5);
+  box-shadow:0 10px 28px rgba(6,199,85,.35);
+}
+.cf-btn-line:hover{box-shadow:0 16px 36px rgba(6,199,85,.5)}
+@media(max-width:768px){
+  .chintai-feature{padding:3.5rem 5%}
+  .cf-ctas{flex-direction:column}
+  .cf-btn{width:100%}
+}
+
 /* ─────────────────────────────
    REVEAL ANIMATIONS
 ───────────────────────────── */
@@ -1476,7 +1566,7 @@ section[id]{scroll-margin-top:76px}
       <li><a href="#home" class="jp">ホーム</a></li>
       <li><a href="#services" class="jp">サービス</a></li>
       <li><a href="#shinsotsu" class="jp">新卒採用</a></li>
-      <li><a href="#bukken" class="jp">賃貸物件</a></li>
+      <li><a href="#chintai" class="jp">賃貸物件</a></li>
       <li><a href="#portfolio" class="jp">制作実績</a></li>
       <li><a href="#about" class="jp">会社概要</a></li>
       <li><a href="https://line.me/ti/p/6g79Rp7EdP" class="nav-cta jp" target="_blank">無料相談</a></li>
@@ -1490,7 +1580,7 @@ section[id]{scroll-margin-top:76px}
   <a href="#home" class="jp">ホーム</a>
   <a href="#services" class="jp">サービス</a>
   <a href="#shinsotsu" class="jp">新卒採用</a>
-  <a href="#bukken" class="jp">賃貸物件</a>
+  <a href="#chintai" class="jp">賃貸物件</a>
   <a href="#portfolio" class="jp">制作実績</a>
   <a href="#about" class="jp">会社概要</a>
   <a href="https://line.me/ti/p/6g79Rp7EdP" class="jp" target="_blank">🟢 無料相談（LINE）</a>
@@ -1572,6 +1662,31 @@ section[id]{scroll-margin-top:76px}
   </div>
 </section>
 
+<!-- ════ 北九州の賃貸物件一覧 特設コーナー ════ -->
+<section class="chintai-feature" id="chintai">
+  <div class="cf-inner rv">
+    <div class="cf-badge jp">🏠 北九州のおすすめ賃貸物件</div>
+    <h2 class="cf-title jp">敷金なし・礼金なし・仲介手数料無料。<br>北九州で、かしこくお部屋探し。</h2>
+    <p class="cf-lead jp">小倉北区・小倉南区・若松区の優良賃貸物件を多数ご紹介。ペット可・リノベーション済・ネット無料の物件も。エリアや条件から探せて、気になる物件はそのままLINEでご相談いただけます。</p>
+    <div class="cf-areas">
+      <div class="cf-area jp"><span class="cf-area-name">小倉北区</span></div>
+      <div class="cf-area jp"><span class="cf-area-name">小倉南区</span></div>
+      <div class="cf-area jp"><span class="cf-area-name">若松区</span></div>
+      <div class="cf-area jp"><span class="cf-area-name">🐾 ペット可</span></div>
+    </div>
+    <div class="cf-tags">
+      <span class="cf-tag jp">💰 敷金・礼金なし多数</span>
+      <span class="cf-tag jp">🐾 ペット可あり</span>
+      <span class="cf-tag jp">✨ リノベ済</span>
+      <span class="cf-tag jp">🌐 ネット無料も</span>
+    </div>
+    <div class="cf-ctas">
+      <a href="kitakyushu-chintai.html" class="cf-btn cf-btn-main jp">北九州の賃貸物件を探す →</a>
+      <a href="https://line.me/ti/p/6g79Rp7EdP" class="cf-btn cf-btn-line jp" target="_blank">🟢 LINEでお部屋を相談</a>
+    </div>
+  </div>
+</section>
+
 <!-- ════ SERVICES ════ -->
 <section class="services" id="services">
   <div class="svc-banner rv">
@@ -1630,12 +1745,12 @@ section[id]{scroll-margin-top:76px}
       <ul class="svc-ul">
         <li>AIコンサル</li>
         <li>SNS集客コンサル・運用代行</li>
-        <li>MEO・SEO対策</li>
+        <li>SEO・MEO・AIO対策（AI検索最適化）</li>
         <li>副業支援</li>
         <li>独立支援</li>
       </ul>
       <div class="svc-btns">
-        <a href="seo-meo.html" class="btn btn-sky btn-sm btn-full jp">🔍 SEO・MEO対策の詳細</a>
+        <a href="seo-meo.html" class="btn btn-sky btn-sm btn-full jp">🔍 SEO・MEO・AIO対策の詳細</a>
         <a href="https://line.me/ti/p/6g79Rp7EdP" class="btn btn-line btn-sm btn-full jp" target="_blank">🟢 LINEで相談する</a>
       </div>
     </div>
